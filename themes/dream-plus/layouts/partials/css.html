@@ -1,0 +1,20 @@
+<link rel="stylesheet" type="text/css" href="/sharedhugo/css/semantic_2.3.1.min.css">
+<style>
+body.pushable {
+	display: block;
+	{{- if .Site.Params.enableColorBG -}}
+		background: linear-gradient(to right, var(--colorBG)) !important;
+	{{ else }}
+		background-image: var(--bgImage) !important;
+	{{ end }} ;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="/sharedhugo/css/site.css">
+{{- if and (fileExists "static/css/highlight.css") .IsPage -}}
+	<link rel="stylesheet" type="text/css" href="/sharedhugo/css/highlight.css">
+{{- end -}}
+{{- range $type, $val:= .Site.Params.customCSS -}}
+{{- if and ((gt (len $val) 0) (index $val "")) -}}
+	<link rel="stylesheet" type="text/css" href="/{{ index $val }}">
+{{- end -}}
+{{- end -}}

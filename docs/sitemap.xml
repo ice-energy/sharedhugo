@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://loogatee.github.io/dp/post/post_001/githubhugo/</loc>
+    <lastmod>2019-02-06T12:19:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://loogatee.github.io/dp/content/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://loogatee.github.io/dp/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://loogatee.github.io/dp/content/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://loogatee.github.io/dp/tags/github/</loc>
+    <lastmod>2019-02-06T12:19:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://loogatee.github.io/dp/</loc>
+    <lastmod>2019-02-06T12:19:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://loogatee.github.io/dp/post/</loc>
+    <lastmod>2019-02-06T12:19:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://loogatee.github.io/dp/categories/systems/solutions/</loc>
+    <lastmod>2019-02-06T12:19:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://loogatee.github.io/dp/tags/</loc>
+    <lastmod>2019-02-06T12:19:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><style>
+body {
+	display: block;
+	--colorBG: "#40e0d0, #ff8c00, #ff0080";
+		background-image: var(--bgImage) !important;
+	
+}
+
+body, body.pushable {
+	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-size: cover !important;
+}
+
+</style><title>
+Github Plus Hugo
+</title><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="author" content="John Reed" />
+	<meta name="description" content="Hugo is an open-source static website generator. It has many themes and many layouts ready to choose from. Content in Hugo consists of posts that you add using markdown format, and the posts are arranged in a logical directory tree structure. See the Hugo site here: Hugo Website.
+I put together 3 Hugo sites, using the same set of post files. Have a quick look:
+ ice-energy.github.io/jreed ice-energy.github.io/user1 ice-energy.github.io/user9  3 questions you probably have after looking at that:" />
+<meta name="generator" content="Hugo 0.40.2" />
+
+<link rel="shortcut icon" href="img/defaultFav.ico">
+
+<link rel="canonical" href="https://loogatee.github.io/dp/post/post_001/githubhugo/" />
+<link rel="alternative" href="/dp/index.xml" title="JohnnyReedDocs" type="application/atom+xml"/>
+<link rel="stylesheet" type="text/css" href="/sharedhugo/css/semantic_2.3.1.min.css">
+<style>
+body.pushable {
+	display: block;
+		background-image: var(--bgImage) !important;
+	 ;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="/sharedhugo/css/site.css">
+<script>
+	var colorBG = ""
+	var enabledPost = true
+	var isMobile = ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )
+	console.log("The client device is a "+(isMobile?"mobile":"PC")+".")
+</script>
+</head>
+
+<body><script>
+var prevBgIndex = 0;
+var bodyBgSwitchIndex = 0;
+		var bgImage = "url(" + "" + ")"
+	
+	console.log("Current background: " + bgImage.substring(bgImage.indexOf("bg"), bgImage.length));
+	document.body.style.setProperty('--blurEff',"");
+	document.body.style.setProperty('--bgImage', bgImage);
+
+	function getRandomInt(min, max) {
+	  min = Math.ceil(min)
+	  max = Math.floor(max)
+	  var random
+	  while (1) {
+	    random = Math.floor(Math.random() * (max - min)) + min
+	    if (random !== prevBgIndex) {
+	      prevBgIndex = random
+	      break
+	    }
+	  }
+	  return random
+	}
+
+	function connect(arr) {
+	  var str = ''
+	  for (var i = 0; i < arr.length; i++) {
+	    if (i !== arr.length - 1) {
+	      str += arr[i] + ', '
+	    } else {
+	      str += arr[i]
+	    }
+	  }
+	  return str
+	}
+</script><div class="blur-overlay"></div><div id="sidebar" class="ui sidebar inverted vertical menu">
+	<section id="author" class="ui top attached center aligned inverted segment"><div class="ui small circular image">
+	<img src="/sharedhugo/img/icelogo.png">
+</div>
+<h3 class="ui header">John Reed
+	<div class="sub header">Computer guy, Golfer dude</div>
+</h3>
+</section><section class="ui attached center aligned inverted segment sidebar-dream-tags">
+<a class="ui label" href="/dp/tags/github/index.html" title="github">github</a>
+
+</section>	
+	
+	<section class="ui attached inverted segment sidebar-dream-categories both flexbox">
+		<div class="ui inverted accordion">
+<div class="title">
+	<i class="dropdown icon"></i>
+	<a class="link" href="/dp/categories/systems/solutions/index.html">systems/solutions</a>
+</div>
+<div class="content">
+
+	<a class="item" href="https://loogatee.github.io/dp/post/post_001/githubhugo/index.html">
+		<div>
+			<i class="cocktail icon"></i>
+			<p>Github Plus Hugo</p>
+		</div>
+	</a>
+
+</div>
+
+</div>
+	</section>
+	
+	
+	<section id="footer" class="ui bottom attached center aligned inverted segment">
+<p>© 2019 JohnnyReedDocs</p>
+    
+<p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with <a href="https://github.com/UtkarshVerma/hugo-dream-plus" target="_blank">Dream Plus</a> theme.</p></section>
+</div>
+<div class="pusher">
+		<div class="flipper">
+			<div class="front">
+<nav class="ui top secondary menu bar">
+	<div class="item">
+		<i class="inverted big link bullseye icon dream-flip-toggle" title="About Me"></i>
+	</div><div class="item">
+		<a href="/sharedhugo/index.html">
+			<i class="inverted big link home icon" title="Home"></i>
+		</a>
+	</div>
+	<div class="item">
+		<a href="/sharedhugo/post/index.html">
+			<i class="inverted big link archive icon" title="Archive"></i>
+		</a>
+	</div>
+	<div class="item">
+		<a href="/sharedhugo/tags/index.html">
+			<i class="inverted big link tags icon" title="All Tags"></i>
+		</a>
+	</div>
+	<div class="item">
+		<a href="/sharedhugo/categories/index.html">
+			<i class="inverted big link cubes icon" title="All Categories"></i>
+		</a>
+    </div>
+	<div class="ui container tablet computer only grid">
+		<div class="item" onClick="$('.ui.sidebar').sidebar('setting', 'transition', 'overlay').sidebar('toggle');">
+			<i class="inverted big link sidebar icon" title="Show Sidebar"></i>
+		</div>
+	</div>
+	
+</nav>
+
+
+<div class="ui centered grid">
+	<div class="sixteen wide mobile only column"><div class="ui inverted accordion">
+	<div id="header" class="ui inverted segment column box">
+		<header id="author" class="ui top attached center aligned inverted segment"><div class="ui small circular image">
+	<img src="/sharedhugo/img/icelogo.png">
+</div>
+<h3 class="ui header">John Reed
+	<div class="sub header">Computer guy, Golfer dude</div>
+</h3>
+</header>
+		<div class=" title header-title"><div id="tag-category-pop" class="ui red right corner label">		
+				<i class="hand point icon down"title="Click this to pop tags and categories"></i>		
+			</div></div>
+		<div id="tag-category" class=" content"><section class="ui attached center aligned inverted segment dream-tags none flexbox">
+<a class="ui label" href="/dp/tags/github/index.html" title="github">github</a>
+
+</section><section class="ui attached inverted segment dream-categories both flexbox">
+			<div class="inverted accordion">
+<div class="title">
+	<i class="dropdown icon"></i>
+	<a class="link" href="/dp/categories/systems/solutions/index.html">systems/solutions</a>
+</div>
+<div class="content">
+
+	<a class="item" href="https://loogatee.github.io/dp/post/post_001/githubhugo/index.html">
+		<div>
+			<i class="cocktail icon"></i>
+			<p>Github Plus Hugo</p>
+		</div>
+	</a>
+
+</div>
+
+</div>
+			</section></div>
+		<footer class="ui bottom attached center aligned inverted segment">
+<p>© 2019 JohnnyReedDocs</p>
+    
+<p>Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> with <a href="https://github.com/UtkarshVerma/hugo-dream-plus" target="_blank">Dream Plus</a> theme.</p></footer>
+	</div>
+</div></div>
+	<div class="sixteen wide mobile fifteen wide tablet twelve wide computer column post-list">
+		<section class="ui secondary top attached black segment post-head">
+			<h1 class="post-title">
+				Github Plus Hugo
+			</h1>
+			<div class="sub header">
+					<div><span><i class="calendar outline icon"></i>Feb 6, 2019</span></div>
+					<div><span><i class="clock outline icon"></i>3 min read</span></div>
+					<div><span><i class="angle double up icon"></i>Last updated on Feb 6, 2019</span></div>
+			</div>
+			<hr><div class="toc"><nav id="TableOfContents">
+<ul>
+<li><a href="#we-have-a-github-account">We have a github account?</a></li>
+<li><a href="#how-d-you-do-that">How&rsquo;d you do that?</a></li>
+<li><a href="#how-do-you-keep-documents-private">How do you keep documents private?</a></li>
+<li><a href="#a-few-more-notes">A few more notes</a></li>
+</ul>
+</nav></div>
+			
+			
+			<article class="post-content twemoji">
+				
+
+<p><img src="../img/githubhugo.jpg" alt="pic1" /></p>
+
+<hr />
+
+<p><em>Hugo</em> is an open-source static website generator.   It has many themes and many layouts
+ready to choose from.   <strong>Content</strong> in <em>Hugo</em> consists of posts that you add
+using markdown format, and the posts are arranged in a logical directory tree structure.
+See the Hugo site here: <a href="https://gohugo.io">Hugo Website</a>.</p>
+
+<p>I put together 3 Hugo sites, using the same set of post files.   Have a quick look:</p>
+
+<ul>
+<li><a href="https://ice-energy.github.io/jreed">ice-energy.github.io/jreed</a></li>
+<li><a href="https://ice-energy.github.io/user1">ice-energy.github.io/user1</a></li>
+<li><a href="https://ice-energy.github.io/user9">ice-energy.github.io/user9</a></li>
+</ul>
+
+<p>3 questions you probably have after looking at that:</p>
+
+<ol>
+<li>We have a github account?</li>
+<li>Holy Cow, how&rsquo;d you do that?</li>
+<li>How do you keep documents private?</li>
+</ol>
+
+<h1 id="we-have-a-github-account">We have a github account?&nbsp;<a class="anchor" href="#we-have-a-github-account"><i class="small linkify icon"></i></a> </h1>
+
+<p>Yeah, github accounts are free.  Pick a username and go.
+For the <em>free deal</em>, all your repositories are public.</p>
+
+<p>For $99/year, repositories can be made private.</p>
+
+<p>I have the password, I&rsquo;ll give it to you if you want to host
+your repository here as well.</p>
+
+<h1 id="how-d-you-do-that">How&rsquo;d you do that?&nbsp;<a class="anchor" href="#how-d-you-do-that"><i class="small linkify icon"></i></a> </h1>
+
+<p>While Github is known as a source code repository, it is also something else:</p>
+
+<blockquote>
+<p>If the repository you are storing ALSO happens to be a Static Website,
+  Github can serve up pages from the site.</p>
+</blockquote>
+
+<p><strong>Chew on that a good long time</strong></p>
+
+<pre><code>
+It's completely unprecendented to have your code repository
+ALSO serve up web-pages that happen to be stored there.
+
+The key concept is that checking in your code and pushing
+the resulting git branch to the server is EQUIVALENT to publishing
+your website.
+
+It's a new paradigm, and it's really incredible.  It makes
+Documentation Management incredibly easy!
+
+</code></pre>
+
+<p>With proper configuration of the github repository, and proper layout
+of the data you are storing there, <strong>github can serve up the pages</strong>.</p>
+
+<p>With Hugo installed locally on my linux workstation, here&rsquo;s the process I use
+for creating that website:</p>
+
+<ul>
+<li>edit content, simple .txt file</li>
+<li>Run Hugo from within a shell script.  This generates the entire static site.</li>
+<li>use git to check-in changes, and push to Server</li>
+<li>browse to site, wait a bit for changes to propagate</li>
+</ul>
+
+<h1 id="how-do-you-keep-documents-private">How do you keep documents private?&nbsp;<a class="anchor" href="#how-do-you-keep-documents-private"><i class="small linkify icon"></i></a> </h1>
+
+<p>1st of all, pay the $99 fee.   That means the repositories are private, but the
+website pages are not.    The key is knowing where the publicly
+browsable files are, and not putting private documents there.</p>
+
+<p>The solution to pub/priv relies on a logical arrangement of the source code tree.</p>
+
+<p>See the repositories at:</p>
+
+<ul>
+<li><a href="https://github.com/ice-energy/jreed">github.com/ice-energy/jreed</a></li>
+<li><a href="https://github.com/ice-energy/user1">github.com/ice-energy/user1</a></li>
+<li><a href="https://github.com/ice-energy/user9">github.com/ice-energy/user9</a></li>
+</ul>
+
+<p>Each of those repo&rsquo;s have 2 content directories, which are the <em>Source Material</em> of
+the documents.</p>
+
+<ul>
+<li><a href="https://github.com/ice-energy/jreed/tree/master/content_pub">content_pub</a> &nbsp; &nbsp; &nbsp;  publicly browsable content.</li>
+<li><a href="https://github.com/ice-energy/jreed/tree/master/content_priv">content_priv</a> &nbsp; &nbsp; &nbsp; private content, not to be displayed on github.</li>
+</ul>
+
+<p>My technique for public/private then is to generate 2 different
+sites, that are completely seperate:</p>
+
+<ul>
+<li>One meant for public viewing on github</li>
+<li>The 2nd one stored on github, <strong>But must be copied somewhere else to be displayed</strong></li>
+</ul>
+
+<p>To do this requires executing Hugo twice while using the proper Source and
+Destination flags.</p>
+
+<p><em>For the publicly visible:</em></p>
+
+<pre><code>  hugo -c &quot;./content_pub&quot; -d &quot;./docs&quot;
+</code></pre>
+
+<p><em>To remain private:</em></p>
+
+<pre><code>  hugo -c &quot;./content_priv&quot; -d &quot;./docs_priv&quot;
+</code></pre>
+
+<p>The 2 output directories, <em>docs</em> and <em>docs_priv</em>, are both:</p>
+
+<blockquote>
+<p>Standalone, Static, Hugo-Based Websites</p>
+</blockquote>
+
+<p><em>docs</em> gets displayed by github as default.  <em>docs_priv</em> will have to
+be copied somewhere else to be displayed.</p>
+
+<h1 id="a-few-more-notes">A few more notes&nbsp;<a class="anchor" href="#a-few-more-notes"><i class="small linkify icon"></i></a> </h1>
+
+<p>See the file <a href="https://github.com/ice-energy/jreed/blob/master/x.sh">x.sh</a>.
+It&rsquo;s the shell script that automates the running of Hugo.</p>
+
+<p>My platform is <em>linux</em>, there&rsquo;d be just a bit of work to do getting this
+to run on Windows.   <em>x.sh</em> might have to be turned into a .bat file.
+Haven&rsquo;t done that yet.    <em>Hugo</em> is supposed to run fine on Windows, but
+again, something I haven&rsquo;t done yet.</p>
+
+<p>Hugo should also be supported on Mac.</p>
+
+<p>I&rsquo;d be glad to help anyone get this up and running for themselves.
+Also, it&rsquo;s not too difficult to set up different themes from gohugo.io.</p>
+
+<p>JR</p>
+
+			</article>
+		</section>
+		<section class="ui secondary attached segment dream-tags">
+<a class="ui label" href="/dp/tags/github/index.html" title="github">github</a>
+
+
+		</section>
+	</div>
+</div>
+
+			</div>
+			<div class="back"><nav class="ui top secondary menu bar">
+	<div class="item">
+		<i class="inverted big link bullseye icon dream-flip-toggle" title="About Me"></i>
+	</div><div class="item">
+	<a href="https://github.com/github.com/loogatee" target="_blank">
+		<i id="ico" class="inverted big link github icon" title="GitHub"></i>
+	</a>
+</div>
+<div class="item">
+	<a href="mailto:johnr@loogatee.com">
+		<i id="ico" class="inverted big link mail icon" title="Email"></i>
+	</a>
+</div>
+
+</nav>
+<div class="ui centered grid about">
+	<div class="sixteen wide mobile fifteen wide tablet fifteen wide computer column about">
+		<section class="ui stacked segments"><div class="ui inverted segment">
+	<article class="twemoji"><h1>IceEnergy sharedhugo</h1>
+
+<hr />
+
+<p><br>
+placeholder</article>
+</div></section>
+	</div>
+</div></div>
+		</div>
+	</div><script src="/sharedhugo/js/jquery_3.3.1.min.js"></script>
+<script src="/sharedhugo/js/site.js"></script>
+<script src="/sharedhugo/js/semantic_2.3.1.min.js"></script>
+
+
+
+</body>
+
+</html>

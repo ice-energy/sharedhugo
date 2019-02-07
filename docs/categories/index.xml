@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on JohnnyReedDocs</title>
+    <link>https://loogatee.github.io/dp/categories/</link>
+    <description>Recent content in Categories on JohnnyReedDocs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://loogatee.github.io/dp/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Systems/Solutions</title>
+      <link>https://loogatee.github.io/dp/categories/systems/solutions/</link>
+      <pubDate>Wed, 06 Feb 2019 12:19:00 +0000</pubDate>
+      
+      <guid>https://loogatee.github.io/dp/categories/systems/solutions/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

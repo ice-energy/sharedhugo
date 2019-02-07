@@ -1,0 +1,42 @@
+baseURL                = "https://loogatee.github.io/dp"
+languageCode           = "en-us"
+defaultContentLanguage = "en"
+title                  = "JohnnyReedDocs"
+theme                  = "dream-plus"
+canonifyURLs           = false
+
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+pygmentsOptions    = "linenos=table"
+
+#disqusShortname = "dream-plus"
+enableRobotsTXT  = true
+enableEmoji      = true
+
+[params]
+	author           = "John Reed"
+	description      = "My Projects: A Placeholder for Notes & Documentation"
+	avatar           = "img/jr.jpg"
+	motto            = "Computer guy, Golfer dude"
+	enableToc        = true
+	#enableShareCard = true
+
+	favicon = "img/defaultFav.ico"
+  	
+  	#Background settings
+	#enableColorBG = false
+	#bgBlur        = "0px"
+	#bgImage       = "http://bit.ly/2gPLxZ4"
+  
+	#Post-displaying Settings
+	enableTags       = true
+	enableCategories = true
+
+	itemsPerPage = 6                          # Cards or posts shown per page
+	contentType = "post"                      # Set whether you're hosting "cards" or "post"
+	#twitterEmoji=true
+
+[social]
+	email         = "johnr@loogatee.com"
+	github        = "github.com/loogatee"
+	siteStartYear = 2018
