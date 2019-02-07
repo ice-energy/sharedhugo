@@ -14,7 +14,7 @@ enableRobotsTXT  = true
 enableEmoji      = true
 
 [params]
-	author           = "Captain Kirk"
+	author           = "Ice-Energy"
 	description      = "A Placeholder for Ice-Energy Notes & Documentation"
 	avatar           = "img/icelogo.jpg"
 	motto            = "Where we go One, We go All"
@@ -38,5 +38,5 @@ enableEmoji      = true
 
 [social]
 	email         = "software@ice-energy.com"
-	github        = "github.com/ice-energy"
+	github        = "ice-energy"
 	siteStartYear = 2018
