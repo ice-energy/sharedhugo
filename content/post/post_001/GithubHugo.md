@@ -42,7 +42,7 @@ For the *free deal*, all your repositories are public.
 
 For $99/year, repositories can be made private.
 
-I have the password, I'll give it to you if you want to host
+I have the Password, I'll give it to you if you want to host
 your repository here as well.
 
 
@@ -53,7 +53,7 @@ While Github is known as a source code repository, it is also something else:
 > If the repository you are storing ALSO happens to be a Static Website,
   Github can serve up pages from the site.
 
-**Chew on that a good long time**
+**Let that sink in!**
 
 ```
 
