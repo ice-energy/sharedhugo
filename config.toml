@@ -1,7 +1,7 @@
-baseURL                = "https://loogatee.github.io/dp"
+baseURL                = "https://ice-energy.github.io/sharedhugo"
 languageCode           = "en-us"
 defaultContentLanguage = "en"
-title                  = "JohnnyReedDocs"
+title                  = "IceEnergySharedHugo"
 theme                  = "dream-plus"
 canonifyURLs           = false
 
@@ -14,10 +14,10 @@ enableRobotsTXT  = true
 enableEmoji      = true
 
 [params]
-	author           = "John Reed"
-	description      = "My Projects: A Placeholder for Notes & Documentation"
-	avatar           = "img/jr.jpg"
-	motto            = "Computer guy, Golfer dude"
+	author           = "Captain Kirk"
+	description      = "A Placeholder for Ice-Energy Notes & Documentation"
+	avatar           = "img/icelogo.jpg"
+	motto            = "Where we go One, We go All"
 	enableToc        = true
 	#enableShareCard = true
 
@@ -37,6 +37,6 @@ enableEmoji      = true
 	#twitterEmoji=true
 
 [social]
-	email         = "johnr@loogatee.com"
-	github        = "github.com/loogatee"
+	email         = "software@ice-energy.com"
+	github        = "github.com/ice-energy"
 	siteStartYear = 2018
