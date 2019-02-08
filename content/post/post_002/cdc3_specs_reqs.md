@@ -66,7 +66,7 @@ functionality built-in and on-chip.    Chip savings include:
 
  [armstrap.org/eagle](http://armstrap.org/eagle/)
 
- [schematic](https://ice-energy.github.io/sharedhugo/post/post_002/img/Schematic.pdf)
+ [Schematic](https://ice-energy.github.io/sharedhugo/post/post_002/img/Schematic.pdf)
 
 ![pic3](../img/eagleboard.jpg)
 
