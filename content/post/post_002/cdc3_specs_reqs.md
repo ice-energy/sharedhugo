@@ -51,29 +51,43 @@ STM32407IG:  ARM Cortex-M4 core with DSP and FPU, 1 Mbyte Flash, 168Mhz, ART Acc
 The 407IG is a more highly integrated part than the Blackfin, and there are several
 chips external to the Blackfin that are no longer needed due to the 407IG having the
 functionality built-in and on-chip.    Chip savings include:
-- Real-time clock
-- the i2c DAC chip
-- Flash memory
-- Ram memory
-- the 8MB spi flash chip
+
+ - Real-Time clock
+
+ - the i2c DAC chip
+
+ - Flash memory
+
+ - Ram memory
+
+ - the 8MB spi flash chip
 
 **CPU Reference Platform**
 
  [armstrap.org/eagle](http://armstrap.org/eagle/)
 
+ [schematic](https://ice-energy.github.io/sharedhugo/post/post_002/img/schematic.pdf)
+
+![pic3](../img/eagleboard.jpg)
+
 **On-Board JTAG debugger**
 
-The reference platform from above include an additional CPU which then
+The reference platform from above includes an additional CPU which then
 serves as a dedicated JTAG debugger.
 
 Any of the STM32F103 family of processors will work for this, for example:
-```
-   STM32F103C8T6
-```
 
+  - STM32F103C8T6
 
 **Linux SBC**
 
+Candidates for Linux SBC include:
+
+ [beaglebone on a module](http://beaglecore.com/)
+ [Raspberry Pi on a module](https://www.raspberrypi.org/products/compute-module-3/)
+ [dart modules variscite](https://www.variscite.com/products/system-on-module-som/)
+
+Any of these will work and some are more integrated than others (including wifi).
 
 
 

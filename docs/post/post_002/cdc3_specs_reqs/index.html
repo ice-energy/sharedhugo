@@ -279,28 +279,48 @@ and it also shows the changes proposed for CDC3.</p>
 
 <p>The 407IG is a more highly integrated part than the Blackfin, and there are several
 chips external to the Blackfin that are no longer needed due to the 407IG having the
-functionality built-in and on-chip.    Chip savings include:
-- Real-time clock
-- the i2c DAC chip
-- Flash memory
-- Ram memory
-- the 8MB spi flash chip</p>
+functionality built-in and on-chip.    Chip savings include:</p>
+
+<ul>
+<li><p>Real-Time clock</p></li>
+
+<li><p>the i2c DAC chip</p></li>
+
+<li><p>Flash memory</p></li>
+
+<li><p>Ram memory</p></li>
+
+<li><p>the 8MB spi flash chip</p></li>
+</ul>
 
 <p><strong>CPU Reference Platform</strong></p>
 
 <p><a href="http://armstrap.org/eagle/">armstrap.org/eagle</a></p>
 
+<p><a href="https://ice-energy.github.io/sharedhugo/post/post_002/img/schematic.pdf">schematic</a></p>
+
+<p><img src="../img/eagleboard.jpg" alt="pic3" /></p>
+
 <p><strong>On-Board JTAG debugger</strong></p>
 
-<p>The reference platform from above include an additional CPU which then
+<p>The reference platform from above includes an additional CPU which then
 serves as a dedicated JTAG debugger.</p>
 
 <p>Any of the STM32F103 family of processors will work for this, for example:</p>
 
-<pre><code>   STM32F103C8T6
-</code></pre>
+<ul>
+<li>STM32F103C8T6</li>
+</ul>
 
 <p><strong>Linux SBC</strong></p>
+
+<p>Candidates for Linux SBC include:</p>
+
+<p><a href="http://beaglecore.com/">beaglebone on a module</a>
+ <a href="https://www.raspberrypi.org/products/compute-module-3/">Raspberry Pi on a module</a>
+ <a href="https://www.variscite.com/products/system-on-module-som/">dart modules variscite</a></p>
+
+<p>Any of these will work and some are more integrated than others (including wifi).</p>
 
 <h1 id="how-d-you-do-that">How&rsquo;d you do that?&nbsp;<a class="anchor" href="#how-d-you-do-that"><i class="small linkify icon"></i></a> </h1>
 
