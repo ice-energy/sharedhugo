@@ -226,7 +226,16 @@ var bodyBgSwitchIndex = 0;
 			</div>
 			<hr><div class="toc"><nav id="TableOfContents">
 <ul>
-<li><a href="#cpu-requirements">CPU requirements</a></li>
+<li><a href="#cpu-requirements">CPU requirements</a>
+<ul>
+<li>
+<ul>
+<li><a href="#cdc-controller-cpu">CDC Controller CPU</a></li>
+<li><a href="#cpu-reference-platform">CPU Reference Platform</a></li>
+<li><a href="#on-board-jtag-debugger">On-Board JTAG debugger</a></li>
+<li><a href="#linux-sbc">Linux SBC</a></li>
+</ul></li>
+</ul></li>
 <li><a href="#how-d-you-do-that">How&rsquo;d you do that?</a></li>
 <li><a href="#how-do-you-keep-documents-private">How do you keep documents private?</a></li>
 <li><a href="#a-few-more-notes">A few more notes</a></li>
@@ -267,7 +276,7 @@ and it also shows the changes proposed for CDC3.</p>
 <li>Uses highly functional Linux Single Board Computer for the network front-end.</li>
 </ul>
 
-<p>** <strong>CDC Controller CPU</strong> **</p>
+<h3 id="cdc-controller-cpu">CDC Controller CPU&nbsp;<a class="anchor" href="#cdc-controller-cpu"><i class="small linkify icon"></i></a> </h3>
 
 <pre><code>STM32407IG:  ARM Cortex-M4 core with DSP and FPU, 1 Mbyte Flash, 168Mhz, ART Accelerator.
 192+4 Kbytes SRAM including 64-Kbyte of CCM data RAM
@@ -285,7 +294,7 @@ functionality built-in and on-chip.    Chip savings include:</p>
 <li>the 8MB spi flash chip</li>
 </ul>
 
-<p><strong>CPU Reference Platform</strong></p>
+<h3 id="cpu-reference-platform">CPU Reference Platform&nbsp;<a class="anchor" href="#cpu-reference-platform"><i class="small linkify icon"></i></a> </h3>
 
 <p><a href="http://armstrap.org/eagle/">armstrap.org/eagle</a></p>
 
@@ -293,7 +302,7 @@ functionality built-in and on-chip.    Chip savings include:</p>
 
 <p><img src="../img/eagleboard.jpg" alt="pic3" /></p>
 
-<p><strong>On-Board JTAG debugger</strong></p>
+<h3 id="on-board-jtag-debugger">On-Board JTAG debugger&nbsp;<a class="anchor" href="#on-board-jtag-debugger"><i class="small linkify icon"></i></a> </h3>
 
 <p>The reference platform from above includes an additional CPU which then
 serves as a dedicated JTAG debugger.</p>
@@ -304,7 +313,7 @@ serves as a dedicated JTAG debugger.</p>
 <li>STM32F103C8T6</li>
 </ul>
 
-<p><strong>Linux SBC</strong></p>
+<h3 id="linux-sbc">Linux SBC&nbsp;<a class="anchor" href="#linux-sbc"><i class="small linkify icon"></i></a> </h3>
 
 <p>Candidates for Linux SBC include:</p>
 
