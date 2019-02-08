@@ -109,7 +109,7 @@ for the technicians.
 Keep the connectors same as in CDC1.  
 These means the techs will not have to crimp wires in the field.
 
-![pic5](../img/onewireconnectors.png)
+![pic5](../img/onewireconnectors.jpg)
 
 
 ---
