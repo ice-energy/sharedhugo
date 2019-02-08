@@ -23,6 +23,7 @@ CDC3 Specifications/Requirements
 	<meta name="author" content="Ice-Energy" />
 	<meta name="description" content="This document will provide a list of specifications and requirements for the CDC3 controller.
 CPU requirements The picture below shows the existing board architecture on CDC1/CDC2, and it also shows the changes proposed for CDC3.
+
 The architectures are strikingly similary:
  Both have a seperate Network Controller on the Front-End Both have a beefy 32-bit CPU on the back-end for handling all the controls and sensors.  A newly updated CDC3:" />
 <meta name="generator" content="Hugo 0.40.2" />
@@ -236,6 +237,13 @@ var bodyBgSwitchIndex = 0;
 <li><a href="#linux-sbc">Linux SBC</a></li>
 </ul></li>
 </ul></li>
+<li><a href="#digital-sensor-bus">Digital Sensor Bus</a>
+<ul>
+<li>
+<ul>
+<li><a href="#1-wire-connectors">1-Wire Connectors</a></li>
+</ul></li>
+</ul></li>
 <li><a href="#how-d-you-do-that">How&rsquo;d you do that?</a></li>
 <li><a href="#how-do-you-keep-documents-private">How do you keep documents private?</a></li>
 <li><a href="#a-few-more-notes">A few more notes</a></li>
@@ -262,7 +270,8 @@ and it also shows the changes proposed for CDC3.</p>
 
 <p><img src="../img/cdc_arch.jpg" alt="pic2" /></p>
 
-<p>The architectures are strikingly similary:</p>
+<p><br><br>
+The architectures are strikingly similary:</p>
 
 <ul>
 <li>Both have a seperate Network Controller on the Front-End</li>
@@ -279,7 +288,7 @@ and it also shows the changes proposed for CDC3.</p>
 <h3 id="cdc-controller-cpu">CDC Controller CPU&nbsp;<a class="anchor" href="#cdc-controller-cpu"><i class="small linkify icon"></i></a> </h3>
 
 <pre><code>STM32407IG:  ARM Cortex-M4 core with DSP and FPU, 1 Mbyte Flash, 168Mhz, ART Accelerator.
-192+4 Kbytes SRAM including 64-Kbyte of CCM data RAM
+             192+4 Kbytes SRAM including 64-Kbyte of CCM data RAM
 </code></pre>
 
 <p>The 407IG is a more highly integrated part than the Blackfin, and there are several
@@ -329,6 +338,31 @@ serves as a dedicated JTAG debugger.</p>
 Software and Distro support.</p>
 
 <p><img src="../img/computemodule.png" alt="pic4" /></p>
+
+<hr />
+
+<h1 id="digital-sensor-bus">Digital Sensor Bus&nbsp;<a class="anchor" href="#digital-sensor-bus"><i class="small linkify icon"></i></a> </h1>
+
+<p>The standard 8 port 1-Wire solution from CDC1 will be used.</p>
+
+<p>IceBears&rsquo; currently use up to 5 of the 1-Wire ports:</p>
+
+<ul>
+<li>I0.OAt, A1.SAt, A1.RAt, A2.SAt, A2.RAt</li>
+</ul>
+
+<p>Only temperature type 1-Wire sensors are used.    There&rsquo;s place-holders in the code
+to use other type of sensors (humidity for example), but they are not ever used.</p>
+
+<h3 id="1-wire-connectors">1-Wire Connectors&nbsp;<a class="anchor" href="#1-wire-connectors"><i class="small linkify icon"></i></a> </h3>
+
+<p>These sensors are frequently installed in the field, so they need to be easy to work with
+for the technicians.</p>
+
+<p>Keep the connectors same as in CDC1.<br />
+These means the techs will not have to crimp wires in the field.</p>
+
+<p><img src="../img/onewireconnectors.png" alt="pic5" /></p>
 
 <hr />
 

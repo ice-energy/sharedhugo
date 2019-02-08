@@ -29,6 +29,7 @@ and it also shows the changes proposed for CDC3.
 
 ![pic2](../img/cdc_arch.jpg)
 
+<br><br>
 The architectures are strikingly similary:
 
  - Both have a seperate Network Controller on the Front-End
@@ -42,7 +43,7 @@ A newly updated CDC3:
 ### CDC Controller CPU
 ```
 STM32407IG:  ARM Cortex-M4 core with DSP and FPU, 1 Mbyte Flash, 168Mhz, ART Accelerator.
-192+4 Kbytes SRAM including 64-Kbyte of CCM data RAM
+             192+4 Kbytes SRAM including 64-Kbyte of CCM data RAM
 ```
 
 The 407IG is a more highly integrated part than the Blackfin, and there are several
@@ -87,15 +88,31 @@ Software and Distro support.
 
 ![pic4](../img/computemodule.png)
 
+---
+
+# Digital Sensor Bus
+
+The standard 8 port 1-Wire solution from CDC1 will be used.
+
+IceBears' currently use up to 5 of the 1-Wire ports:
+
+ - I0.OAt, A1.SAt, A1.RAt, A2.SAt, A2.RAt
+
+Only temperature type 1-Wire sensors are used.    There's place-holders in the code
+to use other type of sensors (humidity for example), but they are not ever used.
+
+### 1-Wire Connectors
+
+These sensors are frequently installed in the field, so they need to be easy to work with
+for the technicians.
+
+Keep the connectors same as in CDC1.  
+These means the techs will not have to crimp wires in the field.
+
+![pic5](../img/onewireconnectors.png)
 
 
 ---
-
-
-
-
-
-
 
 
 # How'd you do that?

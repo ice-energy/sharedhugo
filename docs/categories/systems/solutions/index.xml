@@ -19,6 +19,7 @@
       <guid>https://ice-energy.github.io/sharedhugo/post/post_002/cdc3_specs_reqs/</guid>
       <description>This document will provide a list of specifications and requirements for the CDC3 controller.
 CPU requirements The picture below shows the existing board architecture on CDC1/CDC2, and it also shows the changes proposed for CDC3.
+
 The architectures are strikingly similary:
  Both have a seperate Network Controller on the Front-End Both have a beefy 32-bit CPU on the back-end for handling all the controls and sensors.  A newly updated CDC3:</description>
     </item>
