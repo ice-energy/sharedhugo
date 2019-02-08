@@ -222,7 +222,7 @@ var bodyBgSwitchIndex = 0;
 			</h1>
 			<div class="sub header">
 					<div><span><i class="calendar outline icon"></i>Feb 7, 2019</span></div>
-					<div><span><i class="clock outline icon"></i>4 min read</span></div>
+					<div><span><i class="clock outline icon"></i>6 min read</span></div>
 					<div><span><i class="angle double up icon"></i>Last updated on Feb 7, 2019</span></div>
 			</div>
 			<hr><div class="toc"><nav id="TableOfContents">
@@ -242,6 +242,14 @@ var bodyBgSwitchIndex = 0;
 <li>
 <ul>
 <li><a href="#1-wire-connectors">1-Wire Connectors</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#digital-inputs">Digital Inputs</a>
+<ul>
+<li>
+<ul>
+<li><a href="#5v-digital-inputs">5v Digital Inputs</a></li>
+<li><a href="#24v-ac-dc-digital-input">24V AC/DC Digital Input.</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#how-d-you-do-that">How&rsquo;d you do that?</a></li>
@@ -360,11 +368,72 @@ to use other type of sensors (humidity for example), but they are not ever used.
 for the technicians.</p>
 
 <p>Keep the connectors same as in CDC1.<br />
-These means the techs will not have to crimp wires in the field.</p>
+This means the techs will not have to crimp wires in the field.</p>
 
 <p><img src="../img/onewireconnectors.jpg" alt="pic5" /></p>
 
 <hr />
+
+<h1 id="digital-inputs">Digital Inputs&nbsp;<a class="anchor" href="#digital-inputs"><i class="small linkify icon"></i></a> </h1>
+
+<p>There are 2 categories of Digital Inputs:
+   - need 8: standard 0-5v GPIOs
+   - need 7: 24V AC/DC   (round to 8??)</p>
+
+<h3 id="5v-digital-inputs">5v Digital Inputs&nbsp;<a class="anchor" href="#5v-digital-inputs"><i class="small linkify icon"></i></a> </h3>
+
+<p>The standard header that is used on CDC1 for Digital Inputs
+can be used.   In addition to the actual Pin ports, there are
+extra ports for 5v and GND.   Those can remain.</p>
+
+<p><img src="../img/digioconnectors.jpg" alt="pic6" /></p>
+
+<p>4 of the Digital Inputs are mapped to:</p>
+
+<ul>
+<li>Make Ice</li>
+<li>Melt Ice</li>
+<li>System Off</li>
+<li>System Bypass</li>
+</ul>
+
+<p>The other 4 are used for Bear functionality:</p>
+
+<ul>
+<li>I0.RPd3 &nbsp; &nbsp; &nbsp; &nbsp; is the refrigerant pump fault</li>
+<li>TargetCompOn2  &nbsp; &nbsp; &nbsp; &nbsp; optional, indicates if Target Compressor #2 is on</li>
+<li>DR1 &nbsp; &nbsp; &nbsp; &nbsp; reflects state of DR #1 device</li>
+<li>DR2 &nbsp; &nbsp; &nbsp; &nbsp; reflects state of DR #2 device</li>
+</ul>
+
+<p>Needs for TargetCompOn2, DR1, DR2 as digital inputs would go away
+when these signals are more properly mapped to 24V AC/DC.   Right
+now the techs have to wire these up with external relays.</p>
+
+<h3 id="24v-ac-dc-digital-input">24V AC/DC Digital Input.&nbsp;<a class="anchor" href="#24v-ac-dc-digital-input"><i class="small linkify icon"></i></a> </h3>
+
+<p>&nbsp; &nbsp; (2VDC / 3VAC Threshold)</p>
+
+<p>Right now, the Bear has 4 of these ports: I1, I2, I3, I4.
+They are used for:</p>
+
+<ul>
+<li>Z1S1  &nbsp; &nbsp; &nbsp; &nbsp;    zone #1 call for cooling</li>
+<li>Z2S1    &nbsp; &nbsp; &nbsp; &nbsp;  zone #2 call for cooling</li>
+<li>RDisable1 &nbsp; &nbsp; &nbsp; &nbsp; Remote Disable signal from zone #1</li>
+<li>TargetCompOn1  &nbsp; Reflects state of Target Compressor #1</li>
+</ul>
+
+<p><img src="../img/in24vconnectors.jpg" alt="pic7" /></p>
+
+<p>3 additional high-voltage inputs could be utilized for signals
+currently being routed to the 5v inputs:</p>
+
+<ul>
+<li>TargetCompOn2</li>
+<li>DR1</li>
+<li>DR2</li>
+</ul>
 
 <h1 id="how-d-you-do-that">How&rsquo;d you do that?&nbsp;<a class="anchor" href="#how-d-you-do-that"><i class="small linkify icon"></i></a> </h1>
 
