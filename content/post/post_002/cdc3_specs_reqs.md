@@ -32,18 +32,14 @@ and it also shows the changes proposed for CDC3.
 The architectures are strikingly similary:
 
  - Both have a seperate Network Controller on the Front-End
-
  - Both have a beefy 32-bit CPU on the back-end for handling all the controls and sensors.
 
 A newly updated CDC3:
 
  - Replaces Blackfin CPU with more highly integrated and standard ARM CPU
-
  - Uses highly functional Linux Single Board Computer for the network front-end.
 
-
-**CDC Controller CPU**
-<div><p><p>
+** **CDC Controller CPU** **
 ```
 STM32407IG:  ARM Cortex-M4 core with DSP and FPU, 1 Mbyte Flash, 168Mhz, ART Accelerator.
 192+4 Kbytes SRAM including 64-Kbyte of CCM data RAM
@@ -59,9 +55,7 @@ functionality built-in and on-chip.    Chip savings include:
  - Ram memory
  - the 8MB spi flash chip
 
-</p></p></div>
 **CPU Reference Platform**
-<div><p><p>
 
  [armstrap.org/eagle](http://armstrap.org/eagle/)
 
@@ -69,9 +63,7 @@ functionality built-in and on-chip.    Chip savings include:
 
 ![pic3](../img/eagleboard.jpg)
 
-</p></p></div>
 **On-Board JTAG debugger**
-<div><p><p>
 
 The reference platform from above includes an additional CPU which then
 serves as a dedicated JTAG debugger.
@@ -80,9 +72,7 @@ Any of the STM32F103 family of processors will work for this, for example:
 
   - STM32F103C8T6
 
-</p></p></div>
 **Linux SBC**
-<div><p><p>
 
 Candidates for Linux SBC include:
 
@@ -98,7 +88,6 @@ Software and Distro support.
 ![pic4](../img/computemodule.png)
 
 
-</p></p></div>
 
 ---
 

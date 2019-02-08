@@ -24,9 +24,7 @@ CDC3 Specifications/Requirements
 	<meta name="description" content="This document will provide a list of specifications and requirements for the CDC3 controller.
 CPU requirements The picture below shows the existing board architecture on CDC1/CDC2, and it also shows the changes proposed for CDC3.
 The architectures are strikingly similary:
- Both have a seperate Network Controller on the Front-End
- Both have a beefy 32-bit CPU on the back-end for handling all the controls and sensors.
-  A newly updated CDC3:" />
+ Both have a seperate Network Controller on the Front-End Both have a beefy 32-bit CPU on the back-end for handling all the controls and sensors.  A newly updated CDC3:" />
 <meta name="generator" content="Hugo 0.40.2" />
 
 <link rel="shortcut icon" href="img/defaultFav.ico">
@@ -258,21 +256,18 @@ and it also shows the changes proposed for CDC3.</p>
 <p>The architectures are strikingly similary:</p>
 
 <ul>
-<li><p>Both have a seperate Network Controller on the Front-End</p></li>
-
-<li><p>Both have a beefy 32-bit CPU on the back-end for handling all the controls and sensors.</p></li>
+<li>Both have a seperate Network Controller on the Front-End</li>
+<li>Both have a beefy 32-bit CPU on the back-end for handling all the controls and sensors.</li>
 </ul>
 
 <p>A newly updated CDC3:</p>
 
 <ul>
-<li><p>Replaces Blackfin CPU with more highly integrated and standard ARM CPU</p></li>
-
-<li><p>Uses highly functional Linux Single Board Computer for the network front-end.</p></li>
+<li>Replaces Blackfin CPU with more highly integrated and standard ARM CPU</li>
+<li>Uses highly functional Linux Single Board Computer for the network front-end.</li>
 </ul>
 
-<p><strong>CDC Controller CPU</strong>
-<div><p><p></p>
+<p>** <strong>CDC Controller CPU</strong> **</p>
 
 <pre><code>STM32407IG:  ARM Cortex-M4 core with DSP and FPU, 1 Mbyte Flash, 168Mhz, ART Accelerator.
 192+4 Kbytes SRAM including 64-Kbyte of CCM data RAM
@@ -290,9 +285,7 @@ functionality built-in and on-chip.    Chip savings include:</p>
 <li>the 8MB spi flash chip</li>
 </ul>
 
-<p></p></p></div>
-<strong>CPU Reference Platform</strong>
-<div><p><p></p>
+<p><strong>CPU Reference Platform</strong></p>
 
 <p><a href="http://armstrap.org/eagle/">armstrap.org/eagle</a></p>
 
@@ -300,9 +293,7 @@ functionality built-in and on-chip.    Chip savings include:</p>
 
 <p><img src="../img/eagleboard.jpg" alt="pic3" /></p>
 
-<p></p></p></div>
-<strong>On-Board JTAG debugger</strong>
-<div><p><p></p>
+<p><strong>On-Board JTAG debugger</strong></p>
 
 <p>The reference platform from above includes an additional CPU which then
 serves as a dedicated JTAG debugger.</p>
@@ -313,9 +304,7 @@ serves as a dedicated JTAG debugger.</p>
 <li>STM32F103C8T6</li>
 </ul>
 
-<p></p></p></div>
-<strong>Linux SBC</strong>
-<div><p><p></p>
+<p><strong>Linux SBC</strong></p>
 
 <p>Candidates for Linux SBC include:</p>
 
@@ -331,8 +320,6 @@ serves as a dedicated JTAG debugger.</p>
 Software and Distro support.</p>
 
 <p><img src="../img/computemodule.png" alt="pic4" /></p>
-
-<p></p></p></div></p>
 
 <hr />
 
