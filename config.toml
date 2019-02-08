@@ -38,5 +38,5 @@ enableEmoji      = true
 
 [social]
 	email         = "software@ice-energy.com"
-	github        = "ice-energy"
+	github        = "ice-energy/sharedhugo"
 	siteStartYear = 2018
