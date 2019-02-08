@@ -66,7 +66,7 @@ functionality built-in and on-chip.    Chip savings include:
 
  [armstrap.org/eagle](http://armstrap.org/eagle/)
 
- [schematic](https://ice-energy.github.io/sharedhugo/post/post_002/img/schematic.pdf)
+ [schematic](https://ice-energy.github.io/sharedhugo/post/post_002/img/Schematic.pdf)
 
 ![pic3](../img/eagleboard.jpg)
 
@@ -83,9 +83,9 @@ Any of the STM32F103 family of processors will work for this, for example:
 
 Candidates for Linux SBC include:
 
- [beaglebone on a module](http://beaglecore.com/)
- [Raspberry Pi on a module](https://www.raspberrypi.org/products/compute-module-3/)
- [dart modules variscite](https://www.variscite.com/products/system-on-module-som/)
+ - [beaglebone on a module](http://beaglecore.com/)
+ - [Raspberry Pi on a module](https://www.raspberrypi.org/products/compute-module-3/)
+ - [dart modules variscite](https://www.variscite.com/products/system-on-module-som/)
 
 Any of these will work and some are more integrated than others (including wifi).
 
