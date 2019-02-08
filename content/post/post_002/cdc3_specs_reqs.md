@@ -116,6 +116,7 @@ This means the techs will not have to crimp wires in the field.
 # Digital Inputs
 
 There are 2 categories of Digital Inputs:
+
    - need 8: standard 0-5v GPIOs 
    - need 7: 24V AC/DC   (round to 8??)
 
@@ -136,10 +137,10 @@ extra ports for 5v and GND.   Those can remain.
 
 The other 4 are used for Bear functionality:
 
- - I0.RPd3 &nbsp; &nbsp; &nbsp; &nbsp; is the refrigerant pump fault
- - TargetCompOn2  &nbsp; &nbsp; &nbsp; &nbsp; optional, indicates if Target Compressor #2 is on
- - DR1 &nbsp; &nbsp; &nbsp; &nbsp; reflects state of DR #1 device
- - DR2 &nbsp; &nbsp; &nbsp; &nbsp; reflects state of DR #2 device
+ - I0.RPd3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; is the refrigerant pump fault
+ - TargetCompOn2  &nbsp; optional, indicates if Target Compressor #2 is on
+ - DR1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; reflects state of DR #1 device
+ - DR2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; reflects state of DR #2 device
 
 Needs for TargetCompOn2, DR1, DR2 as digital inputs would go away
 when these signals are more properly mapped to 24V AC/DC.   Right
@@ -152,9 +153,9 @@ now the techs have to wire these up with external relays.
 Right now, the Bear has 4 of these ports: I1, I2, I3, I4.
 They are used for:
 
- - Z1S1  &nbsp; &nbsp; &nbsp; &nbsp;    zone #1 call for cooling
- - Z2S1    &nbsp; &nbsp; &nbsp; &nbsp;  zone #2 call for cooling
- - RDisable1 &nbsp; &nbsp; &nbsp; &nbsp; Remote Disable signal from zone #1
+ - Z1S1  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   zone #1 call for cooling
+ - Z2S1    &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;zone #2 call for cooling
+ - RDisable1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Remote Disable signal from zone #1
  - TargetCompOn1  &nbsp; Reflects state of Target Compressor #1
 
 ![pic7](../img/in24vconnectors.jpg)
