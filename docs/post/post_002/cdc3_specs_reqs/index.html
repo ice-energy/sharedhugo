@@ -229,28 +229,19 @@ var bodyBgSwitchIndex = 0;
 <ul>
 <li><a href="#cpu-requirements">CPU requirements</a>
 <ul>
-<li>
-<ul>
 <li><a href="#cdc-controller-cpu">CDC Controller CPU</a></li>
 <li><a href="#cpu-reference-platform">CPU Reference Platform</a></li>
 <li><a href="#on-board-jtag-debugger">On-Board JTAG debugger</a></li>
 <li><a href="#linux-sbc">Linux SBC</a></li>
 </ul></li>
-</ul></li>
 <li><a href="#digital-sensor-bus">Digital Sensor Bus</a>
-<ul>
-<li>
 <ul>
 <li><a href="#1-wire-connectors">1-Wire Connectors</a></li>
 </ul></li>
-</ul></li>
 <li><a href="#digital-inputs">Digital Inputs</a>
-<ul>
-<li>
 <ul>
 <li><a href="#5v-digital-inputs">5v Digital Inputs</a></li>
 <li><a href="#24v-ac-dc-digital-input">24V AC/DC Digital Input.</a></li>
-</ul></li>
 </ul></li>
 <li><a href="#how-d-you-do-that">How&rsquo;d you do that?</a></li>
 <li><a href="#how-do-you-keep-documents-private">How do you keep documents private?</a></li>
@@ -293,7 +284,7 @@ The architectures are strikingly similary:</p>
 <li>Uses highly functional Linux Single Board Computer for the network front-end.</li>
 </ul>
 
-<h3 id="cdc-controller-cpu">CDC Controller CPU&nbsp;<a class="anchor" href="#cdc-controller-cpu"><i class="small linkify icon"></i></a> </h3>
+<h2 id="cdc-controller-cpu">CDC Controller CPU&nbsp;<a class="anchor" href="#cdc-controller-cpu"><i class="small linkify icon"></i></a> </h2>
 
 <pre><code>STM32407IG:  ARM Cortex-M4 core with DSP and FPU, 1 Mbyte Flash, 168Mhz, ART Accelerator.
              192+4 Kbytes SRAM including 64-Kbyte of CCM data RAM
@@ -311,7 +302,7 @@ functionality built-in and on-chip.    Chip savings include:</p>
 <li>the 8MB spi flash chip</li>
 </ul>
 
-<h3 id="cpu-reference-platform">CPU Reference Platform&nbsp;<a class="anchor" href="#cpu-reference-platform"><i class="small linkify icon"></i></a> </h3>
+<h2 id="cpu-reference-platform">CPU Reference Platform&nbsp;<a class="anchor" href="#cpu-reference-platform"><i class="small linkify icon"></i></a> </h2>
 
 <p><a href="http://armstrap.org/eagle/">armstrap.org/eagle</a></p>
 
@@ -319,7 +310,7 @@ functionality built-in and on-chip.    Chip savings include:</p>
 
 <p><img src="../img/eagleboard.jpg" alt="pic3" /></p>
 
-<h3 id="on-board-jtag-debugger">On-Board JTAG debugger&nbsp;<a class="anchor" href="#on-board-jtag-debugger"><i class="small linkify icon"></i></a> </h3>
+<h2 id="on-board-jtag-debugger">On-Board JTAG debugger&nbsp;<a class="anchor" href="#on-board-jtag-debugger"><i class="small linkify icon"></i></a> </h2>
 
 <p>The reference platform from above includes an additional CPU which then
 serves as a dedicated JTAG debugger.</p>
@@ -330,7 +321,7 @@ serves as a dedicated JTAG debugger.</p>
 <li>STM32F103C8T6</li>
 </ul>
 
-<h3 id="linux-sbc">Linux SBC&nbsp;<a class="anchor" href="#linux-sbc"><i class="small linkify icon"></i></a> </h3>
+<h2 id="linux-sbc">Linux SBC&nbsp;<a class="anchor" href="#linux-sbc"><i class="small linkify icon"></i></a> </h2>
 
 <p>Candidates for Linux SBC include:</p>
 
@@ -362,7 +353,7 @@ Software and Distro support.</p>
 <p>Only temperature type 1-Wire sensors are used.    There&rsquo;s place-holders in the code
 to use other type of sensors (humidity for example), but they are not ever used.</p>
 
-<h3 id="1-wire-connectors">1-Wire Connectors&nbsp;<a class="anchor" href="#1-wire-connectors"><i class="small linkify icon"></i></a> </h3>
+<h2 id="1-wire-connectors">1-Wire Connectors&nbsp;<a class="anchor" href="#1-wire-connectors"><i class="small linkify icon"></i></a> </h2>
 
 <p>These sensors are frequently installed in the field, so they need to be easy to work with
 for the technicians.</p>
@@ -379,11 +370,11 @@ This means the techs will not have to crimp wires in the field.</p>
 <p>There are 2 categories of Digital Inputs:</p>
 
 <ul>
-<li>need 8: standard 0-5v GPIOs</li>
-<li>need 7: 24V AC/DC   (round to 8??)</li>
+<li>need 8: &nbsp; standard 0-5v GPIOs</li>
+<li>need 7: &nbsp; 24V AC/DC  &nbsp; &nbsp; (round to 8??)</li>
 </ul>
 
-<h3 id="5v-digital-inputs">5v Digital Inputs&nbsp;<a class="anchor" href="#5v-digital-inputs"><i class="small linkify icon"></i></a> </h3>
+<h2 id="5v-digital-inputs">5v Digital Inputs&nbsp;<a class="anchor" href="#5v-digital-inputs"><i class="small linkify icon"></i></a> </h2>
 
 <p>The standard header that is used on CDC1 for Digital Inputs
 can be used.   In addition to the actual Pin ports, there are
@@ -391,7 +382,7 @@ extra ports for 5v and GND.   Those can remain.</p>
 
 <p><img src="../img/digioconnectors.jpg" alt="pic6" /></p>
 
-<p>4 of the Digital Inputs are mapped to:</p>
+<p>4 of the Digital Inputs are mapped to Ice-Bear Modes:</p>
 
 <ul>
 <li>Make Ice</li>
@@ -413,16 +404,16 @@ extra ports for 5v and GND.   Those can remain.</p>
 when these signals are more properly mapped to 24V AC/DC.   Right
 now the techs have to wire these up with external relays.</p>
 
-<h3 id="24v-ac-dc-digital-input">24V AC/DC Digital Input.&nbsp;<a class="anchor" href="#24v-ac-dc-digital-input"><i class="small linkify icon"></i></a> </h3>
+<h2 id="24v-ac-dc-digital-input">24V AC/DC Digital Input.&nbsp;<a class="anchor" href="#24v-ac-dc-digital-input"><i class="small linkify icon"></i></a> </h2>
 
 <p>&nbsp; &nbsp; (2VDC / 3VAC Threshold)</p>
 
-<p>Right now, the Bear has 4 of these ports: I1, I2, I3, I4.
+<p>The Bear has 4 High-Voltage Input ports: I1, I2, I3, I4.
 They are used for:</p>
 
 <ul>
-<li>Z1S1  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   zone #1 call for cooling</li>
-<li>Z2S1    &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;zone #2 call for cooling</li>
+<li>Z1S1  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; zone #1 call for cooling</li>
+<li>Z2S1  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; zone #2 call for cooling</li>
 <li>RDisable1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Remote Disable signal from zone #1</li>
 <li>TargetCompOn1  &nbsp; Reflects state of Target Compressor #1</li>
 </ul>
@@ -437,6 +428,8 @@ currently being routed to the 5v inputs:</p>
 <li>DR1</li>
 <li>DR2</li>
 </ul>
+
+<hr />
 
 <h1 id="how-d-you-do-that">How&rsquo;d you do that?&nbsp;<a class="anchor" href="#how-d-you-do-that"><i class="small linkify icon"></i></a> </h1>
 

@@ -40,7 +40,7 @@ A newly updated CDC3:
  - Replaces Blackfin CPU with more highly integrated and standard ARM CPU
  - Uses highly functional Linux Single Board Computer for the network front-end.
 
-### CDC Controller CPU
+## CDC Controller CPU
 ```
 STM32407IG:  ARM Cortex-M4 core with DSP and FPU, 1 Mbyte Flash, 168Mhz, ART Accelerator.
              192+4 Kbytes SRAM including 64-Kbyte of CCM data RAM
@@ -56,7 +56,7 @@ functionality built-in and on-chip.    Chip savings include:
  - Ram memory
  - the 8MB spi flash chip
 
-### CPU Reference Platform
+## CPU Reference Platform
 
  [armstrap.org/eagle](http://armstrap.org/eagle/)
 
@@ -64,7 +64,7 @@ functionality built-in and on-chip.    Chip savings include:
 
 ![pic3](../img/eagleboard.jpg)
 
-### On-Board JTAG debugger
+## On-Board JTAG debugger
 
 The reference platform from above includes an additional CPU which then
 serves as a dedicated JTAG debugger.
@@ -73,7 +73,7 @@ Any of the STM32F103 family of processors will work for this, for example:
 
   - STM32F103C8T6
 
-### Linux SBC
+## Linux SBC
 
 Candidates for Linux SBC include:
 
@@ -101,7 +101,7 @@ IceBears' currently use up to 5 of the 1-Wire ports:
 Only temperature type 1-Wire sensors are used.    There's place-holders in the code
 to use other type of sensors (humidity for example), but they are not ever used.
 
-### 1-Wire Connectors
+## 1-Wire Connectors
 
 These sensors are frequently installed in the field, so they need to be easy to work with
 for the technicians.
@@ -117,10 +117,10 @@ This means the techs will not have to crimp wires in the field.
 
 There are 2 categories of Digital Inputs:
 
-   - need 8: standard 0-5v GPIOs 
-   - need 7: 24V AC/DC   (round to 8??)
+   - need 8: &nbsp; standard 0-5v GPIOs 
+   - need 7: &nbsp; 24V AC/DC  &nbsp; &nbsp; (round to 8??)
 
-### 5v Digital Inputs
+## 5v Digital Inputs
 
 The standard header that is used on CDC1 for Digital Inputs
 can be used.   In addition to the actual Pin ports, there are
@@ -128,7 +128,7 @@ extra ports for 5v and GND.   Those can remain.
 
 ![pic6](../img/digioconnectors.jpg)
 
-4 of the Digital Inputs are mapped to:
+4 of the Digital Inputs are mapped to Ice-Bear Modes:
 
  - Make Ice
  - Melt Ice
@@ -146,15 +146,15 @@ Needs for TargetCompOn2, DR1, DR2 as digital inputs would go away
 when these signals are more properly mapped to 24V AC/DC.   Right
 now the techs have to wire these up with external relays.
 
-### 24V AC/DC Digital Input.
+## 24V AC/DC Digital Input.
 
 &nbsp; &nbsp; (2VDC / 3VAC Threshold)
 
-Right now, the Bear has 4 of these ports: I1, I2, I3, I4.
+The Bear has 4 High-Voltage Input ports: I1, I2, I3, I4.
 They are used for:
 
- - Z1S1  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;   zone #1 call for cooling
- - Z2S1    &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;zone #2 call for cooling
+ - Z1S1  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; zone #1 call for cooling
+ - Z2S1  &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; zone #2 call for cooling
  - RDisable1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Remote Disable signal from zone #1
  - TargetCompOn1  &nbsp; Reflects state of Target Compressor #1
 
@@ -167,8 +167,7 @@ currently being routed to the 5v inputs:
  - DR1
  - DR2
 
-
-
+---
 
 
 
