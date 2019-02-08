@@ -21,9 +21,12 @@ CDC3 Specifications/Requirements
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="author" content="Ice-Energy" />
-	<meta name="description" content="Hugo is an open-source static website generator. It has many themes and many layouts ready to choose from. Content in Hugo consists of posts that you add using markdown format, and the posts are arranged in a logical directory tree structure. See the Hugo site here: Hugo Website.
-I put together 3 Hugo sites, using the same set of post files. Have a quick look:
- ice-energy.github.io/jreed ice-energy.github.io/user1 ice-energy.github.io/user9  Three questions you probably have after looking at that:" />
+	<meta name="description" content="This document will provide a list of specifications and requirements for the CDC3 controller.
+CPU requirements The picture below shows the existing board architecture on CDC1/CDC2, and it also shows the changes proposed for CDC3.
+The architectures are strikingly similary:
+ Both have a seperate Network Controller on the Front-End
+ Both have a beefy 32-bit CPU on the back-end for handling all the controls and sensors.
+  A newly updated CDC3:" />
 <meta name="generator" content="Hugo 0.40.2" />
 
 <link rel="shortcut icon" href="img/defaultFav.ico">
@@ -220,12 +223,12 @@ var bodyBgSwitchIndex = 0;
 			</h1>
 			<div class="sub header">
 					<div><span><i class="calendar outline icon"></i>Feb 7, 2019</span></div>
-					<div><span><i class="clock outline icon"></i>3 min read</span></div>
+					<div><span><i class="clock outline icon"></i>4 min read</span></div>
 					<div><span><i class="angle double up icon"></i>Last updated on Feb 7, 2019</span></div>
 			</div>
 			<hr><div class="toc"><nav id="TableOfContents">
 <ul>
-<li><a href="#we-have-a-github-account">We have a github account?</a></li>
+<li><a href="#cpu-requirements">CPU requirements</a></li>
 <li><a href="#how-d-you-do-that">How&rsquo;d you do that?</a></li>
 <li><a href="#how-do-you-keep-documents-private">How do you keep documents private?</a></li>
 <li><a href="#a-few-more-notes">A few more notes</a></li>
@@ -240,36 +243,66 @@ var bodyBgSwitchIndex = 0;
 
 <hr />
 
-<p><em>Hugo</em> is an open-source static website generator.   It has many themes and many layouts
-ready to choose from.   <strong>Content</strong> in <em>Hugo</em> consists of posts that you add
-using markdown format, and the posts are arranged in a logical directory tree structure.
-See the Hugo site here: <a href="https://gohugo.io">Hugo Website</a>.</p>
+<p>This document will provide a list of specifications and requirements for the CDC3
+controller.</p>
 
-<p>I put together 3 Hugo sites, using the same set of post files.   Have a quick look:</p>
+<hr />
+
+<h1 id="cpu-requirements">CPU requirements&nbsp;<a class="anchor" href="#cpu-requirements"><i class="small linkify icon"></i></a> </h1>
+
+<p>The picture below shows the existing board architecture on CDC1/CDC2,
+and it also shows the changes proposed for CDC3.</p>
+
+<p><img src="../img/cdc_arch.jpg" alt="pic2" /></p>
+
+<p>The architectures are strikingly similary:</p>
 
 <ul>
-<li><a href="https://ice-energy.github.io/jreed">ice-energy.github.io/jreed</a></li>
-<li><a href="https://ice-energy.github.io/user1">ice-energy.github.io/user1</a></li>
-<li><a href="https://ice-energy.github.io/user9">ice-energy.github.io/user9</a></li>
+<li><p>Both have a seperate Network Controller on the Front-End</p></li>
+
+<li><p>Both have a beefy 32-bit CPU on the back-end for handling all the controls and sensors.</p></li>
 </ul>
 
-<p>Three questions you probably have after looking at that:</p>
+<p>A newly updated CDC3:</p>
 
-<ol>
-<li>We have a github account?</li>
-<li>Holy Cow, how&rsquo;d you do that?</li>
-<li>How do you keep documents private?</li>
-</ol>
+<ul>
+<li><p>Replaces Blackfin CPU with more highly integrated and standard ARM CPU</p></li>
 
-<h1 id="we-have-a-github-account">We have a github account?&nbsp;<a class="anchor" href="#we-have-a-github-account"><i class="small linkify icon"></i></a> </h1>
+<li><p>Uses highly functional Linux Single Board Computer for the network front-end.</p></li>
+</ul>
 
-<p>Yeah, github accounts are free.  Pick a username and go.
-For the <em>free deal</em>, all your repositories are public.</p>
+<p><strong>CDC Controller CPU: STM32407IG</strong></p>
 
-<p>For $99/year, repositories can be made private.</p>
+<pre><code>ARM Cortex-M4 core with DSP and FPU, 1 Mbyte Flash, 168Mhz, ART Accelerator.
+192+4 Kbytes SRAM including 64-Kbyte of CCM data RAM
+</code></pre>
 
-<p>I have the Password, I&rsquo;ll give it to you if you want to host
-your repository here as well.</p>
+<p>The 407IG is a more highly integrated part than the Blackfin, and there are several
+chips external to the Blackfin that are no longer needed due to the 407IG having the
+functionality built-in and on-chip.    Chip savings include:</p>
+
+<pre><code>- Real-time clock
+- the i2c DAC chip
+- Flash memory
+- Ram memory
+- the 8MB spi flash chip
+</code></pre>
+
+<p><strong>CPU Reference Platform</strong></p>
+
+<p><a href="http://armstrap.org/eagle/">armstrap.org/eagle</a></p>
+
+<p><strong>On-Board JTAG debugger</strong></p>
+
+<p>The reference platform from above include an additional CPU which then
+serves as a dedicated JTAG debugger.</p>
+
+<p>Any of the STM32F103 family of processors will work for this, for example:</p>
+
+<pre><code>   STM32F103C8T6
+</code></pre>
+
+<p><strong>Linux SBC</strong></p>
 
 <h1 id="how-d-you-do-that">How&rsquo;d you do that?&nbsp;<a class="anchor" href="#how-d-you-do-that"><i class="small linkify icon"></i></a> </h1>
 

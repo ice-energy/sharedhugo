@@ -17,9 +17,12 @@
       <pubDate>Thu, 07 Feb 2019 10:10:00 +0000</pubDate>
       
       <guid>https://ice-energy.github.io/sharedhugo/post/post_002/cdc3_specs_reqs/</guid>
-      <description>Hugo is an open-source static website generator. It has many themes and many layouts ready to choose from. Content in Hugo consists of posts that you add using markdown format, and the posts are arranged in a logical directory tree structure. See the Hugo site here: Hugo Website.
-I put together 3 Hugo sites, using the same set of post files. Have a quick look:
- ice-energy.github.io/jreed ice-energy.github.io/user1 ice-energy.github.io/user9  Three questions you probably have after looking at that:</description>
+      <description>This document will provide a list of specifications and requirements for the CDC3 controller.
+CPU requirements The picture below shows the existing board architecture on CDC1/CDC2, and it also shows the changes proposed for CDC3.
+The architectures are strikingly similary:
+ Both have a seperate Network Controller on the Front-End
+ Both have a beefy 32-bit CPU on the back-end for handling all the controls and sensors.
+  A newly updated CDC3:</description>
     </item>
     
   </channel>

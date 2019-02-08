@@ -1,49 +1,95 @@
 ---
-title:  "CDC3 Specifications/Requirements"
-date:   2019-02-07T10:10:00
+title:          "CDC3 Specifications/Requirements"
+date:           2019-02-07T10:10:00
+description:    "Specifications and Requirements for Ice-Energy 3rd-generation Controller"
+draft:          false
+cover:          "/sharedhugo/img/cover_cdc3specs.jpg"
+menu:           main
 tags:
 - CDC3
 categories:
 - Systems/Solutions
-description: "Specifications and Requirements for Ice-Energy 3rd-generation Controller"
-draft: false
-cover: "/sharedhugo/img/cover_cdc3specs.jpg"
-menu: main
-
 ---
 
 ![pic1](../img/cdc3specs.jpg)
 
 ---
 
-*Hugo* is an open-source static website generator.   It has many themes and many layouts
-ready to choose from.   **Content** in *Hugo* consists of posts that you add
-using markdown format, and the posts are arranged in a logical directory tree structure.
-See the Hugo site here: [Hugo Website](https://gohugo.io).
+This document will provide a list of specifications and requirements for the CDC3
+controller.
 
-I put together 3 Hugo sites, using the same set of post files.   Have a quick look:
-
- - [ice-energy.github.io/jreed](https://ice-energy.github.io/jreed)
- - [ice-energy.github.io/user1](https://ice-energy.github.io/user1)
- - [ice-energy.github.io/user9](https://ice-energy.github.io/user9)
-
-Three questions you probably have after looking at that:
-
- 1.  We have a github account?
- 2.  Holy Cow, how'd you do that?
- 3.  How do you keep documents private?
+---
 
 
 
-# We have a github account?
+# CPU requirements
 
-Yeah, github accounts are free.  Pick a username and go.
-For the *free deal*, all your repositories are public.
+The picture below shows the existing board architecture on CDC1/CDC2,
+and it also shows the changes proposed for CDC3.
 
-For $99/year, repositories can be made private.
+![pic2](../img/cdc_arch.jpg)
 
-I have the Password, I'll give it to you if you want to host
-your repository here as well.
+The architectures are strikingly similary:
+
+ - Both have a seperate Network Controller on the Front-End
+
+ - Both have a beefy 32-bit CPU on the back-end for handling all the controls and sensors.
+
+A newly updated CDC3:
+
+ - Replaces Blackfin CPU with more highly integrated and standard ARM CPU
+
+ - Uses highly functional Linux Single Board Computer for the network front-end.
+
+
+**CDC Controller CPU: STM32407IG**
+```
+ARM Cortex-M4 core with DSP and FPU, 1 Mbyte Flash, 168Mhz, ART Accelerator.
+192+4 Kbytes SRAM including 64-Kbyte of CCM data RAM
+```
+
+The 407IG is a more highly integrated part than the Blackfin, and there are several
+chips external to the Blackfin that are no longer needed due to the 407IG having the
+functionality built-in and on-chip.    Chip savings include:
+
+    - Real-time clock
+    - the i2c DAC chip
+    - Flash memory
+    - Ram memory
+    - the 8MB spi flash chip
+
+**CPU Reference Platform**
+
+ [armstrap.org/eagle](http://armstrap.org/eagle/)
+
+**On-Board JTAG debugger**
+
+The reference platform from above include an additional CPU which then
+serves as a dedicated JTAG debugger.
+
+Any of the STM32F103 family of processors will work for this, for example:
+```
+   STM32F103C8T6
+```
+
+
+**Linux SBC**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 # How'd you do that?
