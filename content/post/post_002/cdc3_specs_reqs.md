@@ -89,14 +89,17 @@ Candidates for Linux SBC include:
 
 Any of these will work and some are more integrated than others (including wifi).
 
+I am in favor of the Raspberry Pi Compute Module, mainly due to the
+Software and Distro support.
+
+![pic4](../img/computemodule.jpg)
 
 
 
 
 
 
-
-
+---
 
 
 
