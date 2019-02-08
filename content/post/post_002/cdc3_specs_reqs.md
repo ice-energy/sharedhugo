@@ -43,7 +43,7 @@ A newly updated CDC3:
 
 
 **CDC Controller CPU**
-<div><div><div>
+<div><p><p>
 ```
 STM32407IG:  ARM Cortex-M4 core with DSP and FPU, 1 Mbyte Flash, 168Mhz, ART Accelerator.
 192+4 Kbytes SRAM including 64-Kbyte of CCM data RAM
@@ -59,9 +59,9 @@ functionality built-in and on-chip.    Chip savings include:
  - Ram memory
  - the 8MB spi flash chip
 
-</div></div></div>
+</p></p></div>
 **CPU Reference Platform**
-<div><div><div>
+<div><p><p>
 
  [armstrap.org/eagle](http://armstrap.org/eagle/)
 
@@ -69,9 +69,9 @@ functionality built-in and on-chip.    Chip savings include:
 
 ![pic3](../img/eagleboard.jpg)
 
-</div></div></div>
+</p></p></div>
 **On-Board JTAG debugger**
-<div><div><div>
+<div><p><p>
 
 The reference platform from above includes an additional CPU which then
 serves as a dedicated JTAG debugger.
@@ -80,9 +80,9 @@ Any of the STM32F103 family of processors will work for this, for example:
 
   - STM32F103C8T6
 
-</div></div></div>
+</p></p></div>
 **Linux SBC**
-<div><div><div>
+<div><p><p>
 
 Candidates for Linux SBC include:
 
@@ -98,7 +98,7 @@ Software and Distro support.
 ![pic4](../img/computemodule.png)
 
 
-</div></div></div>
+</p></p></div>
 
 ---
 
