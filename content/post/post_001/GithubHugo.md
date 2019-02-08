@@ -27,7 +27,7 @@ I put together 3 Hugo sites, using the same set of post files.   Have a quick lo
  - [ice-energy.github.io/user1](https://ice-energy.github.io/user1)
  - [ice-energy.github.io/user9](https://ice-energy.github.io/user9)
 
-3 questions you probably have after looking at that:
+Three questions you probably have after looking at that:
 
  1.  We have a github account?
  2.  Holy Cow, how'd you do that?
