@@ -43,6 +43,7 @@ A newly updated CDC3:
 
 
 **CDC Controller CPU**
+<div><div><div>
 ```
 STM32407IG:  ARM Cortex-M4 core with DSP and FPU, 1 Mbyte Flash, 168Mhz, ART Accelerator.
 192+4 Kbytes SRAM including 64-Kbyte of CCM data RAM
@@ -53,16 +54,14 @@ chips external to the Blackfin that are no longer needed due to the 407IG having
 functionality built-in and on-chip.    Chip savings include:
 
  - Real-Time clock
-
  - the i2c DAC chip
-
  - Flash memory
-
  - Ram memory
-
  - the 8MB spi flash chip
 
+</div></div></div>
 **CPU Reference Platform**
+<div><div><div>
 
  [armstrap.org/eagle](http://armstrap.org/eagle/)
 
@@ -70,7 +69,9 @@ functionality built-in and on-chip.    Chip savings include:
 
 ![pic3](../img/eagleboard.jpg)
 
+</div></div></div>
 **On-Board JTAG debugger**
+<div><div><div>
 
 The reference platform from above includes an additional CPU which then
 serves as a dedicated JTAG debugger.
@@ -79,7 +80,9 @@ Any of the STM32F103 family of processors will work for this, for example:
 
   - STM32F103C8T6
 
+</div></div></div>
 **Linux SBC**
+<div><div><div>
 
 Candidates for Linux SBC include:
 
@@ -95,9 +98,7 @@ Software and Distro support.
 ![pic4](../img/computemodule.jpg)
 
 
-
-
-
+</div></div></div>
 
 ---
 
