@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://ice-energy.github.io/sharedhugo/post/post_002/cdc3_specs_reqs/</loc>
+    <lastmod>2019-02-07T10:10:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://ice-energy.github.io/sharedhugo/post/post_001/githubhugo/</loc>
     <lastmod>2019-02-06T12:19:00+00:00</lastmod>
   </url>
@@ -13,6 +18,12 @@
   
   <url>
     <loc>https://ice-energy.github.io/sharedhugo/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://ice-energy.github.io/sharedhugo/tags/cdc3/</loc>
+    <lastmod>2019-02-07T10:10:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -29,25 +40,25 @@
   
   <url>
     <loc>https://ice-energy.github.io/sharedhugo/</loc>
-    <lastmod>2019-02-06T12:19:00+00:00</lastmod>
+    <lastmod>2019-02-07T10:10:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ice-energy.github.io/sharedhugo/post/</loc>
-    <lastmod>2019-02-06T12:19:00+00:00</lastmod>
+    <lastmod>2019-02-07T10:10:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ice-energy.github.io/sharedhugo/categories/systems/solutions/</loc>
-    <lastmod>2019-02-06T12:19:00+00:00</lastmod>
+    <lastmod>2019-02-07T10:10:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://ice-energy.github.io/sharedhugo/tags/</loc>
-    <lastmod>2019-02-06T12:19:00+00:00</lastmod>
+    <lastmod>2019-02-07T10:10:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

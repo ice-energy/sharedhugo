@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on IceEnergySharedHugo</title>
-    <link>https://ice-energy.github.io/sharedhugo/post/</link>
-    <description>Recent content in Posts on IceEnergySharedHugo</description>
+    <title>Cdc3 on IceEnergySharedHugo</title>
+    <link>https://ice-energy.github.io/sharedhugo/tags/cdc3/</link>
+    <description>Recent content in Cdc3 on IceEnergySharedHugo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 07 Feb 2019 10:10:00 +0000</lastBuildDate>
     
-	<atom:link href="https://ice-energy.github.io/sharedhugo/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://ice-energy.github.io/sharedhugo/tags/cdc3/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -17,17 +17,6 @@
       <pubDate>Thu, 07 Feb 2019 10:10:00 +0000</pubDate>
       
       <guid>https://ice-energy.github.io/sharedhugo/post/post_002/cdc3_specs_reqs/</guid>
-      <description>Hugo is an open-source static website generator. It has many themes and many layouts ready to choose from. Content in Hugo consists of posts that you add using markdown format, and the posts are arranged in a logical directory tree structure. See the Hugo site here: Hugo Website.
-I put together 3 Hugo sites, using the same set of post files. Have a quick look:
- ice-energy.github.io/jreed ice-energy.github.io/user1 ice-energy.github.io/user9  Three questions you probably have after looking at that:</description>
-    </item>
-    
-    <item>
-      <title>Github Plus Hugo</title>
-      <link>https://ice-energy.github.io/sharedhugo/post/post_001/githubhugo/</link>
-      <pubDate>Wed, 06 Feb 2019 12:19:00 +0000</pubDate>
-      
-      <guid>https://ice-energy.github.io/sharedhugo/post/post_001/githubhugo/</guid>
       <description>Hugo is an open-source static website generator. It has many themes and many layouts ready to choose from. Content in Hugo consists of posts that you add using markdown format, and the posts are arranged in a logical directory tree structure. See the Hugo site here: Hugo Website.
 I put together 3 Hugo sites, using the same set of post files. Have a quick look:
  ice-energy.github.io/jreed ice-energy.github.io/user1 ice-energy.github.io/user9  Three questions you probably have after looking at that:</description>
