@@ -271,22 +271,20 @@ and it also shows the changes proposed for CDC3.</p>
 <li><p>Uses highly functional Linux Single Board Computer for the network front-end.</p></li>
 </ul>
 
-<p><strong>CDC Controller CPU: STM32407IG</strong></p>
+<p><strong>CDC Controller CPU</strong></p>
 
-<pre><code>ARM Cortex-M4 core with DSP and FPU, 1 Mbyte Flash, 168Mhz, ART Accelerator.
+<pre><code>STM32407IG:  ARM Cortex-M4 core with DSP and FPU, 1 Mbyte Flash, 168Mhz, ART Accelerator.
 192+4 Kbytes SRAM including 64-Kbyte of CCM data RAM
 </code></pre>
 
 <p>The 407IG is a more highly integrated part than the Blackfin, and there are several
 chips external to the Blackfin that are no longer needed due to the 407IG having the
-functionality built-in and on-chip.    Chip savings include:</p>
-
-<pre><code>- Real-time clock
+functionality built-in and on-chip.    Chip savings include:
+- Real-time clock
 - the i2c DAC chip
 - Flash memory
 - Ram memory
-- the 8MB spi flash chip
-</code></pre>
+- the 8MB spi flash chip</p>
 
 <p><strong>CPU Reference Platform</strong></p>
 
