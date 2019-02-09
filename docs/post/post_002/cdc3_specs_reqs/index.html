@@ -221,7 +221,7 @@ var bodyBgSwitchIndex = 0;
 			</h1>
 			<div class="sub header">
 					<div><span><i class="calendar outline icon"></i>Feb 7, 2019</span></div>
-					<div><span><i class="clock outline icon"></i>6 min read</span></div>
+					<div><span><i class="clock outline icon"></i>7 min read</span></div>
 					<div><span><i class="angle double up icon"></i>Last updated on Feb 7, 2019</span></div>
 			</div>
 			<hr><div class="toc"><nav id="TableOfContents">
@@ -529,11 +529,11 @@ external hardware and using the signals to indicate
 status:</p>
 
 <ul>
-<li>When the unit is making Ice</li>
-<li>When the refrigerant pump is operating</li>
-<li>When the bear is in the melt window</li>
-<li>When the unit needs servicing by a technician</li>
-<li>PWM output signal to reflect quantity of Ice in tank</li>
+<li><strong>ChargeStatus:</strong> &nbsp;        When the unit is making Ice</li>
+<li><strong>FaultStatus:</strong> &nbsp; &nbsp;  When the unit needs servicing by a technician</li>
+<li><strong>RPumpStatus:</strong> &nbsp;         When the refrigerant pump is operating</li>
+<li><strong>MeltWStatus:</strong> &nbsp;         When the bear is in the melt window</li>
+<li><strong>QIceStatus:</strong>  &nbsp; &nbsp;  PWM output signal to reflect quantity of Ice in tank</li>
 </ul>
 
 <p>Note that there is opportunity to move the DR1 and DR2 signals to <strong>24v AC</strong> pins.

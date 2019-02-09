@@ -253,11 +253,11 @@ Other **POTENTIAL** uses for the 5v outputs include interfacing to
 external hardware and using the signals to indicate
 status:
 
- - When the unit is making Ice
- - When the refrigerant pump is operating
- - When the bear is in the melt window
- - When the unit needs servicing by a technician
- - PWM output signal to reflect quantity of Ice in tank
+ - **ChargeStatus:** &nbsp;        When the unit is making Ice
+ - **FaultStatus:** &nbsp; &nbsp;  When the unit needs servicing by a technician
+ - **RPumpStatus:** &nbsp;         When the refrigerant pump is operating
+ - **MeltWStatus:** &nbsp;         When the bear is in the melt window
+ - **QIceStatus:**  &nbsp; &nbsp;  PWM output signal to reflect quantity of Ice in tank
 
 Note that there is opportunity to move the DR1 and DR2 signals to **24v AC** pins.
 (see section below)
