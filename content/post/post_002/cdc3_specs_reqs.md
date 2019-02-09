@@ -35,7 +35,7 @@ For physical connectors on-board, the 2 categories of connector types are:
  - screw terminal/push-pin: &nbsp; Wires need stripping
  - molex: &nbsp; &nbsp; Wires need stripping and crimping and a connector
 
-The general consensus (Ian and Tom primarily) is that for wires that land in the field
+The general consensus (Ian/Tom/Joseph) is that for wires that land in the field
 the connector type should be screw-terminal/push-pin.
 
 For wires that are primarily connected up at the factory, make the connectors molex.
@@ -131,7 +131,7 @@ On CDC3, data storage will migrate to the Host (Linux SBC).
 
 The standard 8 port 1-Wire solution from CDC1 will be used.
 
-IceBears' currently use up to 5 of the 1-Wire ports:
+Ice-Bears' currently use up to 5 of the 1-Wire ports:
 
  - I0.OAt, A1.SAt, A1.RAt, A2.SAt, A2.RAt
 
