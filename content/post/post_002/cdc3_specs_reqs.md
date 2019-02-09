@@ -113,7 +113,7 @@ On CDC3, data storage will migrate to the Host (Linux SBC).
 
 ---
 
-# 1-Wire Bus
+# Sensors/Controls: &nbsp; 1-Wire Bus
 
 The standard 8 port 1-Wire solution from CDC1 will be used.
 
@@ -136,7 +136,7 @@ This means the techs will not have to crimp wires in the field.
 
 ---
 
-# Digital Inputs
+# Sensors/Controls: &nbsp; Digital Inputs
 
 There are 2 categories of Digital Inputs:
 
@@ -219,7 +219,7 @@ Potential for screw terminals.
 
 ---
 
-# Digital Outputs
+# Sensors/Controls: &nbsp; Digital Outputs
 
 There are 4 categories of Digital Outputs:
 
@@ -274,9 +274,9 @@ They are used for the following 2 outputs:
  - IUIC1
  - IUIC2
 
-**Same 2 Output ports needed on CDC3**.
+**The same 2 Output ports are needed on CDC3**.
 
-Connectors should be Molex.
+Connectors: Molex.
 
 
 ## 24v AC Outputs Sold-State-Relay (@ 4A)
