@@ -22,10 +22,9 @@ CDC3 Specifications/Requirements
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="author" content="Ice-Energy" />
 	<meta name="description" content="This document will provide a list of specifications and requirements for the CDC3 controller.
-CPU requirements The picture below shows the existing board architecture on CDC1/CDC2, and it also shows the changes proposed for CDC3.
-
-The architectures are strikingly similary:
- Both have a seperate Network Controller on the Front-End Both have a beefy 32-bit CPU on the back-end for handling all the controls and sensors.  A newly updated CDC3:" />
+There is some discussion on each topic that requires a physical connector on-board. The 2 competing connector types are:
+ screw terminal molex  The general consensus (Ian and Tom primarily) is that for wires that land in the field the connector type should be screw-terminal.
+For wires that are primarily connected up at the factory, make the connectors molex." />
 <meta name="generator" content="Hugo 0.40.2" />
 
 <link rel="shortcut icon" href="img/defaultFav.ico">
@@ -266,6 +265,19 @@ var bodyBgSwitchIndex = 0;
 
 <p>This document will provide a list of specifications and requirements for the CDC3
 controller.</p>
+
+<p>There is some discussion on each topic that requires a physical connector on-board.
+The 2 competing connector types are:</p>
+
+<ul>
+<li>screw terminal</li>
+<li>molex</li>
+</ul>
+
+<p>The general consensus (Ian and Tom primarily) is that for wires that land in the field
+the connector type should be screw-terminal.</p>
+
+<p>For wires that are primarily connected up at the factory, make the connectors molex.</p>
 
 <hr />
 

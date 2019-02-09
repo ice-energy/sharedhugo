@@ -18,9 +18,18 @@ categories:
 This document will provide a list of specifications and requirements for the CDC3
 controller.
 
+There is some discussion on each topic that requires a physical connector on-board.
+The 2 competing connector types are:
+
+ - screw terminal
+ - molex
+
+The general consensus (Ian and Tom primarily) is that for wires that land in the field
+the connector type should be screw-terminal.
+
+For wires that are primarily connected up at the factory, make the connectors molex.
+
 ---
-
-
 
 # CPU requirements
 

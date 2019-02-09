@@ -18,10 +18,9 @@
       
       <guid>https://ice-energy.github.io/sharedhugo/post/post_002/cdc3_specs_reqs/</guid>
       <description>This document will provide a list of specifications and requirements for the CDC3 controller.
-CPU requirements The picture below shows the existing board architecture on CDC1/CDC2, and it also shows the changes proposed for CDC3.
-
-The architectures are strikingly similary:
- Both have a seperate Network Controller on the Front-End Both have a beefy 32-bit CPU on the back-end for handling all the controls and sensors.  A newly updated CDC3:</description>
+There is some discussion on each topic that requires a physical connector on-board. The 2 competing connector types are:
+ screw terminal molex  The general consensus (Ian and Tom primarily) is that for wires that land in the field the connector type should be screw-terminal.
+For wires that are primarily connected up at the factory, make the connectors molex.</description>
     </item>
     
   </channel>
