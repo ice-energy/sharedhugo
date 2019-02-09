@@ -251,7 +251,9 @@ var bodyBgSwitchIndex = 0;
 <li><a href="#digital-outputs">Digital Outputs</a>
 <ul>
 <li><a href="#5v-digital-outputs">5v Digital Outputs</a></li>
-<li><a href="#24v-ac-dc-outputs-2a">24v AC/DC Outputs (@ 2a)</a></li>
+<li><a href="#24v-ac-dc-outputs-solid-state-relay-2a">24v AC/DC Outputs Solid-State-Relay (@ 2a)</a></li>
+<li><a href="#24v-ac-outputs-sold-state-relay-4a">24v AC Outputs Sold-State-Relay (@ 4A)</a></li>
+<li><a href="#24v-ac-outputs-sold-state-relay-4a-1">24v AC Outputs Sold-State-Relay (@ 4A)</a></li>
 </ul></li>
 </ul>
 </nav></div>
@@ -260,7 +262,7 @@ var bodyBgSwitchIndex = 0;
 			<article class="post-content twemoji">
 				
 
-<p><img src="../img/cdc3specs.jpg" alt="pic1" /></p>
+<p><img src="../img/cdc3specs.jpg" alt="pic01" /></p>
 
 <hr />
 
@@ -287,7 +289,7 @@ the connector type should be screw-terminal.</p>
 <p>The picture below shows the existing board architecture on CDC1/CDC2,
 and it also shows the changes proposed for CDC3.</p>
 
-<p><img src="../img/cdc_arch.jpg" alt="pic2" /></p>
+<p><img src="../img/cdc_arch.jpg" alt="pic02" /></p>
 
 <p><br><br>
 The architectures are strikingly similary:</p>
@@ -328,7 +330,7 @@ functionality built-in and on-chip.    Chip savings include:</p>
 
 <p><a href="https://ice-energy.github.io/sharedhugo/post/post_002/img/Schematic.pdf">Schematic</a></p>
 
-<p><img src="../img/eagleboard.jpg" alt="pic3" /></p>
+<p><img src="../img/eagleboard.jpg" alt="pic03" /></p>
 
 <h2 id="on-board-jtag-debugger">On-Board JTAG debugger&nbsp;<a class="anchor" href="#on-board-jtag-debugger"><i class="small linkify icon"></i></a> </h2>
 
@@ -356,7 +358,7 @@ serves as a dedicated JTAG debugger.</p>
 <p>I am in favor of the Raspberry Pi Compute Module, mainly due to the
 Software and Distro support.</p>
 
-<p><img src="../img/computemodule.png" alt="pic4" /></p>
+<p><img src="../img/computemodule.png" alt="pic04" /></p>
 
 <h3 id="data-storage">Data Storage&nbsp;<a class="anchor" href="#data-storage"><i class="small linkify icon"></i></a> </h3>
 
@@ -394,7 +396,7 @@ for the technicians.</p>
 <p>Keep the connectors same as in CDC1.<br />
 This means the techs will not have to crimp wires in the field.</p>
 
-<p><img src="../img/onewireconnectors.jpg" alt="pic5" /></p>
+<p><img src="../img/onewireconnectors.jpg" alt="pic05" /></p>
 
 <hr />
 
@@ -414,7 +416,7 @@ can be used.   In addition to the actual Pin ports, there are
 extra ports for 5v and GND.   Those can remain, as they have
 proven valuable.</p>
 
-<p><img src="../img/digioconnectors.jpg" alt="pic6" /></p>
+<p><img src="../img/digioconnectors.jpg" alt="pic06" /></p>
 
 <p>4 of the Digital Inputs are mapped to Ice-Bear Modes:</p>
 
@@ -456,7 +458,7 @@ and take some action based on that.
 
 <p>Example PWM signal with 75% duty cycle shown below:</p>
 
-<p><img src="../img/pwmsignal.png" alt="pic6a" /></p>
+<p><img src="../img/pwmsignal.png" alt="pic06a" /></p>
 
 <h2 id="24v-ac-dc-digital-input">24V AC/DC Digital Input.&nbsp;<a class="anchor" href="#24v-ac-dc-digital-input"><i class="small linkify icon"></i></a> </h2>
 
@@ -472,7 +474,7 @@ They are used for:</p>
 <li>TargetCompOn1  &nbsp; Reflects state of Target Compressor #1</li>
 </ul>
 
-<p><img src="../img/in24vconnectors.jpg" alt="pic7" /></p>
+<p><img src="../img/in24vconnectors.jpg" alt="pic07" /></p>
 
 <p>3 additional high-voltage inputs could be utilized for signals
 currently being routed to the 5v inputs:</p>
@@ -506,7 +508,7 @@ Potential for screw terminals.</p>
 style connector as CDC1 due to the output wires typically needing to be landed
 out in the field.</p>
 
-<p><img src="../img/5vconnector.jpg" alt="pic8" /></p>
+<p><img src="../img/5vconnector.jpg" alt="pic08" /></p>
 
 <p>On CDC1/CDC2 there are 4 GPIO output pins.   1 is assigned permanently,
 and 2 are optional:</p>
@@ -522,7 +524,7 @@ and 2 are optional:</p>
 <p>The 5v output pins have proven versatile, and valuable for
 one-offs, and development/debugging.</p>
 
-<p>Other uses for the 5v outputs include interfacing to
+<p>Other <strong>POTENTIAL</strong> uses for the 5v outputs include interfacing to
 external hardware and using the signals to indicate
 status:</p>
 
@@ -534,11 +536,14 @@ status:</p>
 <li>PWM output signal to reflect quantity of Ice in tank</li>
 </ul>
 
-<h2 id="24v-ac-dc-outputs-2a">24v AC/DC Outputs (@ 2a)&nbsp;<a class="anchor" href="#24v-ac-dc-outputs-2a"><i class="small linkify icon"></i></a> </h2>
+<p>Note that there is opportunity to move the DR1 and DR2 signals to <strong>24v AC</strong> pins.
+(see section below)</p>
+
+<h2 id="24v-ac-dc-outputs-solid-state-relay-2a">24v AC/DC Outputs Solid-State-Relay (@ 2a)&nbsp;<a class="anchor" href="#24v-ac-dc-outputs-solid-state-relay-2a"><i class="small linkify icon"></i></a> </h2>
 
 <p>On CDC1, there are 2 of these: labeled S7 and S8.</p>
 
-<p><img src="../img/24vACDCconnector.jpg" alt="pic9" /></p>
+<p><img src="../img/24vACDCconnector.jpg" alt="pic09" /></p>
 
 <p>They are used for the following 2 outputs:</p>
 
@@ -546,6 +551,36 @@ status:</p>
 <li>IUIC1</li>
 <li>IUIC2</li>
 </ul>
+
+<p><strong>Same 2 Output ports needed on CDC3</strong>.</p>
+
+<p>Connectors should be Molex.</p>
+
+<h2 id="24v-ac-outputs-sold-state-relay-4a">24v AC Outputs Sold-State-Relay (@ 4A)&nbsp;<a class="anchor" href="#24v-ac-outputs-sold-state-relay-4a"><i class="small linkify icon"></i></a> </h2>
+
+<p>On CDC1, there are 4 of these: labeled S9,S10,S11,S12.</p>
+
+<p><img src="../img/24vACconnector.jpg" alt="pic10" /></p>
+
+<p>They are used for the following 4 outputs:</p>
+
+<ul>
+<li>Z1SV &nbsp; &nbsp; &nbsp; Zone #1 Solenoid Valve</li>
+<li>Z2SV &nbsp; &nbsp; &nbsp; Zone #2 Solenoid Valve</li>
+<li>Fan2Relay &nbsp; Fan Relay</li>
+<li>CPCont &nbsp; &nbsp; Compressor Contactor</li>
+</ul>
+
+<p>2 additional 24vAC Outputs are needed for DR:</p>
+
+<ul>
+<li>DR1 &nbsp; Demand Response #1</li>
+<li>DR2 &nbsp; Demand Response #2</li>
+</ul>
+
+<p>**Total of 6 24v AC Outputs on CDC3 **</p>
+
+<h2 id="24v-ac-outputs-sold-state-relay-4a-1">24v AC Outputs Sold-State-Relay (@ 4A)&nbsp;<a class="anchor" href="#24v-ac-outputs-sold-state-relay-4a-1"><i class="small linkify icon"></i></a> </h2>
 
 			</article>
 		</section>

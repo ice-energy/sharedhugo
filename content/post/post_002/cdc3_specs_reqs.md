@@ -11,7 +11,7 @@ categories:
 - Systems/Solutions
 ---
 
-![pic1](../img/cdc3specs.jpg)
+![pic01](../img/cdc3specs.jpg)
 
 ---
 
@@ -36,7 +36,7 @@ For wires that are primarily connected up at the factory, make the connectors mo
 The picture below shows the existing board architecture on CDC1/CDC2,
 and it also shows the changes proposed for CDC3.
 
-![pic2](../img/cdc_arch.jpg)
+![pic02](../img/cdc_arch.jpg)
 
 <br><br>
 The architectures are strikingly similary:
@@ -71,7 +71,7 @@ functionality built-in and on-chip.    Chip savings include:
 
  [Schematic](https://ice-energy.github.io/sharedhugo/post/post_002/img/Schematic.pdf)
 
-![pic3](../img/eagleboard.jpg)
+![pic03](../img/eagleboard.jpg)
 
 ## On-Board JTAG debugger
 
@@ -95,7 +95,7 @@ Any of these will work and some are more integrated than others (including wifi)
 I am in favor of the Raspberry Pi Compute Module, mainly due to the
 Software and Distro support.
 
-![pic4](../img/computemodule.png)
+![pic04](../img/computemodule.png)
 
 ### Data Storage
 
@@ -132,7 +132,7 @@ for the technicians.
 Keep the connectors same as in CDC1.  
 This means the techs will not have to crimp wires in the field.
 
-![pic5](../img/onewireconnectors.jpg)
+![pic05](../img/onewireconnectors.jpg)
 
 ---
 
@@ -150,7 +150,7 @@ can be used.   In addition to the actual Pin ports, there are
 extra ports for 5v and GND.   Those can remain, as they have
 proven valuable.
 
-![pic6](../img/digioconnectors.jpg)
+![pic06](../img/digioconnectors.jpg)
 
 4 of the Digital Inputs are mapped to Ice-Bear Modes:
 
@@ -189,7 +189,7 @@ and take some action based on that.
 
 Example PWM signal with 75% duty cycle shown below:
 
-![pic6a](../img/pwmsignal.png)
+![pic06a](../img/pwmsignal.png)
 
 
 ## 24V AC/DC Digital Input.
@@ -204,7 +204,7 @@ They are used for:
  - RDisable1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Remote Disable signal from zone #1
  - TargetCompOn1  &nbsp; Reflects state of Target Compressor #1
 
-![pic7](../img/in24vconnectors.jpg)
+![pic07](../img/in24vconnectors.jpg)
 
 3 additional high-voltage inputs could be utilized for signals
 currently being routed to the 5v inputs:
@@ -235,7 +235,7 @@ These are standard 5v GPIO output signals.   Again would like to use the same
 style connector as CDC1 due to the output wires typically needing to be landed
 out in the field.
 
-![pic8](../img/5vconnector.jpg)
+![pic08](../img/5vconnector.jpg)
 
 On CDC1/CDC2 there are 4 GPIO output pins.   1 is assigned permanently,
 and 2 are optional:
@@ -249,7 +249,7 @@ and 2 are optional:
 The 5v output pins have proven versatile, and valuable for
 one-offs, and development/debugging.
 
-Other uses for the 5v outputs include interfacing to
+Other **POTENTIAL** uses for the 5v outputs include interfacing to
 external hardware and using the signals to indicate
 status:
 
@@ -259,24 +259,47 @@ status:
  - When the unit needs servicing by a technician
  - PWM output signal to reflect quantity of Ice in tank
 
+Note that there is opportunity to move the DR1 and DR2 signals to **24v AC** pins.
+(see section below)
 
-## 24v AC/DC Outputs (@ 2a)
+
+## 24v AC/DC Outputs Solid-State-Relay (@ 2a)
 
 On CDC1, there are 2 of these: labeled S7 and S8.
 
-![pic9](../img/24vACDCconnector.jpg)
+![pic09](../img/24vACDCconnector.jpg)
 
 They are used for the following 2 outputs:
 
  - IUIC1
  - IUIC2
 
+**Same 2 Output ports needed on CDC3**.
+
+Connectors should be Molex.
 
 
+## 24v AC Outputs Sold-State-Relay (@ 4A)
 
+On CDC1, there are 4 of these: labeled S9,S10,S11,S12.
 
+![pic10](../img/24vACconnector.jpg)
 
+They are used for the following 4 outputs:
 
+ - Z1SV &nbsp; &nbsp; &nbsp; Zone #1 Solenoid Valve
+ - Z2SV &nbsp; &nbsp; &nbsp; Zone #2 Solenoid Valve
+ - Fan2Relay &nbsp; Fan Relay
+ - CPCont &nbsp; &nbsp; Compressor Contactor
+
+2 additional 24vAC Outputs are needed for DR:
+
+ - DR1 &nbsp; Demand Response #1
+ - DR2 &nbsp; Demand Response #2
+
+**Total of 6 24v AC Outputs on CDC3 **
+
+## 24v AC Outputs Sold-State-Relay (@ 4A)
 
 
 
