@@ -21,10 +21,10 @@ CDC3 Specifications/Requirements
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="author" content="Ice-Energy" />
-	<meta name="description" content="This document will provide a list of specifications and requirements for the CDC3 controller.
-There is some discussion on each topic that requires a physical connector on-board. The 2 competing connector types are:
- screw terminal molex  The general consensus (Ian and Tom primarily) is that for wires that land in the field the connector type should be screw-terminal.
-For wires that are primarily connected up at the factory, make the connectors molex." />
+	<meta name="description" content="Quick Summary This document will provide a list of specifications and requirements for the CDC3 controller.
+
+Note on Connectors For physical connectors on-board, the 2 categories of connector types are:
+ screw terminal/push-in: &amp;nbsp; Wires need stripping molex: &amp;nbsp; &amp;nbsp; Wires need stripping and crimping and a connector  The general consensus (Ian and Tom primarily) is that for wires that land in the field the connector type should be screw-terminal/push-in." />
 <meta name="generator" content="Hugo 0.40.2" />
 
 <link rel="shortcut icon" href="img/defaultFav.ico">
@@ -226,6 +226,8 @@ var bodyBgSwitchIndex = 0;
 			</div>
 			<hr><div class="toc"><nav id="TableOfContents">
 <ul>
+<li><a href="#quick-summary">Quick Summary</a></li>
+<li><a href="#note-on-connectors">Note on Connectors</a></li>
 <li><a href="#cpu-requirements">CPU requirements</a>
 <ul>
 <li><a href="#cdc-controller-cpu">CDC Controller CPU</a></li>
@@ -264,21 +266,32 @@ var bodyBgSwitchIndex = 0;
 
 <p><img src="../img/cdc3specs.jpg" alt="pic01" /></p>
 
+<p><br></p>
+
 <hr />
+
+<p><br></p>
+
+<h1 id="quick-summary">Quick Summary&nbsp;<a class="anchor" href="#quick-summary"><i class="small linkify icon"></i></a> </h1>
 
 <p>This document will provide a list of specifications and requirements for the CDC3
 controller.</p>
 
-<p>There is some discussion on each topic that requires a physical connector on-board.
-The 2 competing connector types are:</p>
+<p><br></p>
+
+<hr />
+
+<h1 id="note-on-connectors">Note on Connectors&nbsp;<a class="anchor" href="#note-on-connectors"><i class="small linkify icon"></i></a> </h1>
+
+<p>For physical connectors on-board, the 2 categories of connector types are:</p>
 
 <ul>
-<li>screw terminal</li>
-<li>molex</li>
+<li>screw terminal/push-in: &nbsp; Wires need stripping</li>
+<li>molex: &nbsp; &nbsp; Wires need stripping and crimping and a connector</li>
 </ul>
 
 <p>The general consensus (Ian and Tom primarily) is that for wires that land in the field
-the connector type should be screw-terminal.</p>
+the connector type should be screw-terminal/push-in.</p>
 
 <p>For wires that are primarily connected up at the factory, make the connectors molex.</p>
 
@@ -496,10 +509,10 @@ Potential for screw terminals.</p>
 <p>There are 4 categories of Digital Outputs:</p>
 
 <ul>
-<li>need 5: 5v DC (10ma)</li>
-<li>need 2: AC/DC SSR (24v,2a)</li>
-<li>need 6: AC SSR (24V,4A)</li>
-<li>need 8: AC SSR (240V, 7a)</li>
+<li>need 5: &nbsp; 5v DC (10ma)</li>
+<li>need 2: &nbsp; AC/DC SSR (24v,2a)</li>
+<li>need 6: &nbsp; AC SSR (24V,4A)</li>
+<li>need 8: &nbsp; AC SSR (240V, 7a)</li>
 </ul>
 
 <h2 id="5v-digital-outputs">5v Digital Outputs&nbsp;<a class="anchor" href="#5v-digital-outputs"><i class="small linkify icon"></i></a> </h2>

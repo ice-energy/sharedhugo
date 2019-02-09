@@ -13,19 +13,30 @@ categories:
 
 ![pic01](../img/cdc3specs.jpg)
 
+<br>
+
 ---
+
+<br>
+
+# Quick Summary
 
 This document will provide a list of specifications and requirements for the CDC3
 controller.
 
-There is some discussion on each topic that requires a physical connector on-board.
-The 2 competing connector types are:
+<br>
 
- - screw terminal
- - molex
+---
+
+# Note on Connectors
+
+For physical connectors on-board, the 2 categories of connector types are:
+
+ - screw terminal/push-in: &nbsp; Wires need stripping
+ - molex: &nbsp; &nbsp; Wires need stripping and crimping and a connector
 
 The general consensus (Ian and Tom primarily) is that for wires that land in the field
-the connector type should be screw-terminal.
+the connector type should be screw-terminal/push-in.
 
 For wires that are primarily connected up at the factory, make the connectors molex.
 
@@ -223,10 +234,10 @@ Potential for screw terminals.
 
 There are 4 categories of Digital Outputs:
 
-  - need 5: 5v DC (10ma)
-  - need 2: AC/DC SSR (24v,2a)
-  - need 6: AC SSR (24V,4A)
-  - need 8: AC SSR (240V, 7a)
+  - need 5: &nbsp; 5v DC (10ma)
+  - need 2: &nbsp; AC/DC SSR (24v,2a)
+  - need 6: &nbsp; AC SSR (24V,4A)
+  - need 8: &nbsp; AC SSR (240V, 7a)
 
 
 ## 5v Digital Outputs
