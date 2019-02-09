@@ -40,6 +40,8 @@ the connector type should be screw-terminal/push-pin.
 
 For wires that are primarily connected up at the factory, make the connectors molex.
 
+![pic01a](../img/ConnectorTypes.jpg)
+
 ---
 
 # CPU requirements
@@ -174,8 +176,8 @@ The other 4 are used for Bear functionality:
 
  - I0.RPd3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; is the refrigerant pump fault
  - TargetCompOn2  &nbsp; optional, indicates if Target Compressor #2 is on
- - DR1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; reflects state of DR #1 device
- - DR2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; reflects state of DR #2 device
+ - DR1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; optional, reflects state of DR #1 device
+ - DR2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; optional, reflects state of DR #2 device
 
 Needs for TargetCompOn2, DR1, DR2 as 5v Digital Inputs would go away
 when these signals are more properly mapped to 24V AC/DC.   Right
