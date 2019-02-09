@@ -47,7 +47,7 @@ The architectures are strikingly similary:
 A newly updated CDC3:
 
  - Replaces Blackfin CPU with more highly integrated and standard ARM CPU
- - Uses highly functional Linux Single Board Computer for the network front-end.
+ - Uses highly functional **and Extremely Flexible** Linux Single Board Computer for the network front-end.
 
 ## CDC Controller CPU
 ```
