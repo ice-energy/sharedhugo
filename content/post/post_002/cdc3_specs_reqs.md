@@ -148,10 +148,10 @@ now the techs have to wire these up with external relays.
 
 ### New Functionality on Digital Input Pins
 
-The requirement is to handle an incoming PWM signal, and the idea for this
+The requirement is to handle an incoming **PWM Signal**, and the idea for this
 largely comes from Greg Miller.
 
-A PWM input signal could be used in conjunction with a solar installation
+A **PWM Input Signal** could be used in conjunction with a solar installation
 (just one example) to indicate the amount of power that can be delivered
 to the Bear.   A duty cycle of (for example) 60% would mean that the Bear could
 turn on it's compressor and start Making Ice.
@@ -162,6 +162,11 @@ PWM input signal today.   There would need to be a very minor setup change
 on the pin, and then a more significant change to read the incoming signal
 and take some action based on that.
 ```
+
+Example PWM signal with 75% duty cycle shown below:
+
+![pic6a](../img/pwmsignal.png)
+
 
 ## 24V AC/DC Digital Input.
 

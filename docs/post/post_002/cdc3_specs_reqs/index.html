@@ -410,10 +410,10 @@ now the techs have to wire these up with external relays.</p>
 
 <h3 id="new-functionality-on-digital-input-pins">New Functionality on Digital Input Pins&nbsp;<a class="anchor" href="#new-functionality-on-digital-input-pins"><i class="small linkify icon"></i></a> </h3>
 
-<p>The requirement is to handle an incoming PWM signal, and the idea for this
+<p>The requirement is to handle an incoming <strong>PWM Signal</strong>, and the idea for this
 largely comes from Greg Miller.</p>
 
-<p>A PWM input signal could be used in conjunction with a solar installation
+<p>A <strong>PWM Input Signal</strong> could be used in conjunction with a solar installation
 (just one example) to indicate the amount of power that can be delivered
 to the Bear.   A duty cycle of (for example) 60% would mean that the Bear could
 turn on it&rsquo;s compressor and start Making Ice.</p>
@@ -423,6 +423,10 @@ PWM input signal today.   There would need to be a very minor setup change
 on the pin, and then a more significant change to read the incoming signal
 and take some action based on that.
 </code></pre>
+
+<p>Example PWM signal with 75% duty cycle shown below:</p>
+
+<p><img src="../img/pwmsignal.png" alt="pic6a" /></p>
 
 <h2 id="24v-ac-dc-digital-input">24V AC/DC Digital Input.&nbsp;<a class="anchor" href="#24v-ac-dc-digital-input"><i class="small linkify icon"></i></a> </h2>
 
