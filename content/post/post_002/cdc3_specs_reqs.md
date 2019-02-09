@@ -424,7 +424,7 @@ to be used today:
 
 Use Molex Connectors
 
-# Analog Inputs, simplify the circuitry
+## Analog Inputs, simplify the circuitry
 
 The takeaway here is that the current mix of A/D input sensors
 are all of one type:
