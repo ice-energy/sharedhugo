@@ -222,7 +222,7 @@ var bodyBgSwitchIndex = 0;
 			</h1>
 			<div class="sub header">
 					<div><span><i class="calendar outline icon"></i>Feb 7, 2019</span></div>
-					<div><span><i class="clock outline icon"></i>4 min read</span></div>
+					<div><span><i class="clock outline icon"></i>5 min read</span></div>
 					<div><span><i class="angle double up icon"></i>Last updated on Feb 7, 2019</span></div>
 			</div>
 			<hr><div class="toc"><nav id="TableOfContents">
@@ -232,7 +232,10 @@ var bodyBgSwitchIndex = 0;
 <li><a href="#cdc-controller-cpu">CDC Controller CPU</a></li>
 <li><a href="#cpu-reference-platform">CPU Reference Platform</a></li>
 <li><a href="#on-board-jtag-debugger">On-Board JTAG debugger</a></li>
-<li><a href="#linux-sbc">Linux SBC</a></li>
+<li><a href="#linux-sbc">Linux SBC</a>
+<ul>
+<li><a href="#data-storage">Data Storage</a></li>
+</ul></li>
 </ul></li>
 <li><a href="#digital-sensor-bus">Digital Sensor Bus</a>
 <ul>
@@ -341,6 +344,19 @@ serves as a dedicated JTAG debugger.</p>
 Software and Distro support.</p>
 
 <p><img src="../img/computemodule.png" alt="pic4" /></p>
+
+<h3 id="data-storage">Data Storage&nbsp;<a class="anchor" href="#data-storage"><i class="small linkify icon"></i></a> </h3>
+
+<p>With CDC1 and CDC2, data storage was limited to 2MB of flash, plus an extra 8MB of SpiFlash (which as
+of 2/7/2019 has yet to be implemented).    Total of 10MB of data storage.</p>
+
+<p>CDC3 with the <strong>Raspberry-Pi Compute Module</strong> would have approximately 3GB (Giga!) of storage, and that
+is <strong>WITHOUT</strong> an sdcard.    The flash part in the compute module is 4GB.  Linux OS, and &lsquo;other&rsquo; are
+roughly 1GB.    That leaves an <strong>easy</strong> 3GB for data storage.</p>
+
+<pre><code>On CDC1 and CDC2, data storage was on the control-side of things (Blackfin)
+On CDC3, data storage will migrate to the Host (Linux SBC).
+</code></pre>
 
 <hr />
 

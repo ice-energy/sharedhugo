@@ -88,6 +88,20 @@ Software and Distro support.
 
 ![pic4](../img/computemodule.png)
 
+### Data Storage
+
+With CDC1 and CDC2, data storage was limited to 2MB of flash, plus an extra 8MB of SpiFlash (which as
+of 2/7/2019 has yet to be implemented).    Total of 10MB of data storage.
+
+CDC3 with the **Raspberry-Pi Compute Module** would have approximately 3GB (Giga!) of storage, and that
+is **WITHOUT** an sdcard.    The flash part in the compute module is 4GB.  Linux OS, and 'other' are
+roughly 1GB.    That leaves an **easy** 3GB for data storage.
+
+```
+On CDC1 and CDC2, data storage was on the control-side of things (Blackfin)
+On CDC3, data storage will migrate to the Host (Linux SBC).
+```
+
 ---
 
 # Digital Sensor Bus
