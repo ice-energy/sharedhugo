@@ -227,6 +227,8 @@ currently being routed to the 5v inputs:
  - DR1
  - DR2
 
+**For CDC3: Require 7 input ports of type 24V AC/DC.  Round number makes it 8**.
+
 Connector for these signals can be molex type, although it is expected
 that TargetCompOn2, DR1, and DR2 will be all landed in the field.
 Potential for screw terminals.
