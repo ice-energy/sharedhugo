@@ -221,7 +221,7 @@ var bodyBgSwitchIndex = 0;
 			</h1>
 			<div class="sub header">
 					<div><span><i class="calendar outline icon"></i>Feb 7, 2019</span></div>
-					<div><span><i class="clock outline icon"></i>8 min read</span></div>
+					<div><span><i class="clock outline icon"></i>9 min read</span></div>
 					<div><span><i class="angle double up icon"></i>Last updated on Feb 7, 2019</span></div>
 			</div>
 			<hr><div class="toc"><nav id="TableOfContents">
@@ -260,6 +260,8 @@ var bodyBgSwitchIndex = 0;
 <li><a href="#relay-for-the-refrigerant-pump">Relay for the Refrigerant Pump</a></li>
 </ul></li>
 </ul></li>
+<li><a href="#sensors-controls-nbsp-analog-inputs">Sensors/Controls: &nbsp; Analog Inputs</a></li>
+<li><a href="#analog-inputs-simplify-the-circuitry">Analog Inputs, simplify the circuitry</a></li>
 </ul>
 </nav></div>
 			
@@ -677,6 +679,56 @@ from:</p>
 <p>This would keep power to the pump all the time, and still give us
 the ability to remove power in order to Reset the Pump from a fault
 condition.</p>
+
+<hr />
+
+<h1 id="sensors-controls-nbsp-analog-inputs">Sensors/Controls: &nbsp; Analog Inputs&nbsp;<a class="anchor" href="#sensors-controls-nbsp-analog-inputs"><i class="small linkify icon"></i></a> </h1>
+
+<p>On both CDC1/CDC2 there are 14 Analog Inputs, and they form the very heart of
+a CDC boards&rsquo; data-gathering abilities.</p>
+
+<p><img src="../img/ADconnectors_CDC1.jpg" alt="pic14" /></p>
+
+<p>10 of the Inputs have been consistently used in the past and continue
+to be used today:</p>
+
+<ol>
+<li>I0.CDv &nbsp; &nbsp; &nbsp; 5v reference signal</li>
+<li>I0.SYp &nbsp; &nbsp; &nbsp; System Pressure</li>
+<li>I0.CSp &nbsp; &nbsp; &nbsp; Compressor Suction Pressure</li>
+<li>I0.CSt &nbsp; &nbsp; &nbsp; Compressor Suction Temperature</li>
+<li>I0.CBt &nbsp; &nbsp; &nbsp; Cabinet Temperature</li>
+<li>I0.TWt &nbsp; &nbsp; &nbsp; Tank Water Temperature</li>
+<li>N/C</li>
+
+<li><p>I0.SYw &nbsp; &nbsp; &nbsp; System Work</p></li>
+
+<li><p>I0.CPw &nbsp; &nbsp; &nbsp; Compressor Work</p></li>
+
+<li><p>I0.CLt &nbsp; &nbsp; &nbsp; Condenser Liquid Temp</p></li>
+
+<li><p>I0.WSt &nbsp; &nbsp; &nbsp; Wet Suction Temp</p></li>
+
+<li><p>N/C</p></li>
+
+<li><p>N/C</p></li>
+
+<li><p>N/C</p></li>
+</ol>
+
+<p><strong>Minimum need for CDC3 is the above 10 Inputs</strong></p>
+
+<p>Use Molex Connectors</p>
+
+<h1 id="analog-inputs-simplify-the-circuitry">Analog Inputs, simplify the circuitry&nbsp;<a class="anchor" href="#analog-inputs-simplify-the-circuitry"><i class="small linkify icon"></i></a> </h1>
+
+<p>The takeaway here is that the current mix of A/D input sensors
+are all of one type:</p>
+
+<p>&nbsp; &nbsp; <strong>0-10V DC, 5v excitation</strong></p>
+
+<p>The A/D circuitry for CDC3 is no longer required to support
+current sensors or 24v excitation.</p>
 
 			</article>
 		</section>

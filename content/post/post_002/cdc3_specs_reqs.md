@@ -392,33 +392,47 @@ This would keep power to the pump all the time, and still give us
 the ability to remove power in order to Reset the Pump from a fault
 condition.
 
+---
 
+# Sensors/Controls: &nbsp; Analog Inputs
 
+On both CDC1/CDC2 there are 14 Analog Inputs, and they form the very heart of
+a CDC boards' data-gathering abilities.
 
+![pic14](../img/ADconnectors_CDC1.jpg)
 
+10 of the Inputs have been consistently used in the past and continue
+to be used today:
 
+  1. I0.CDv &nbsp; &nbsp; &nbsp; 5v reference signal 
+  2. I0.SYp &nbsp; &nbsp; &nbsp; System Pressure
+  3. I0.CSp &nbsp; &nbsp; &nbsp; Compressor Suction Pressure
+  4. I0.CSt &nbsp; &nbsp; &nbsp; Compressor Suction Temperature
+  5. I0.CBt &nbsp; &nbsp; &nbsp; Cabinet Temperature
+  6. I0.TWt &nbsp; &nbsp; &nbsp; Tank Water Temperature
+  7. N/C
+  8. I0.SYw &nbsp; &nbsp; &nbsp; System Work
 
+  9. I0.CPw &nbsp; &nbsp; &nbsp; Compressor Work
+ 10. I0.CLt &nbsp; &nbsp; &nbsp; Condenser Liquid Temp
+ 11. I0.WSt &nbsp; &nbsp; &nbsp; Wet Suction Temp
+ 12. N/C
+ 13. N/C
+ 14. N/C
 
+**Minimum need for CDC3 is the above 10 Inputs**
 
+Use Molex Connectors
 
+# Analog Inputs, simplify the circuitry
 
+The takeaway here is that the current mix of A/D input sensors
+are all of one type:
 
+ &nbsp; &nbsp; **0-10V DC, 5v excitation**
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+The A/D circuitry for CDC3 is no longer required to support
+current sensors or 24v excitation.
 
 
 
