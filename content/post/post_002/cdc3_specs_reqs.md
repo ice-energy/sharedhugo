@@ -235,6 +235,48 @@ These are standard 5v GPIO output signals.   Again would like to use the same
 style connector as CDC1 due to the output wires typically needing to be landed
 out in the field.
 
+![pic8](../img/5vconnector.jpg)
+
+On CDC1/CDC2 there are 4 GPIO output pins.   1 is assigned permanently,
+and 2 are optional:
+
+ - I0.RPd2 &nbsp; &nbsp; &nbsp; turns on the refrigerant pump
+ - DR1 &nbsp; &nbsp; &nbsp; &nbsp; Demand Response #1 signal &nbsp; (optional)
+ - DR2 &nbsp; &nbsp; &nbsp; &nbsp; Demand Response #2 signal &nbsp; (optional)
+
+**CDC3 requirement is for 5 GPIO output pins**.
+
+The 5v output pins have proven versatile, and valuable for
+one-offs, and development/debugging.
+
+Other uses for the 5v outputs include interfacing to
+external hardware and using the signals to indicate
+status:
+
+ - When the unit is making Ice
+ - When the refrigerant pump is operating
+ - When the bear is in the melt window
+ - When the unit needs servicing by a technician
+ - PWM output signal to reflect quantity of Ice in tank
+
+
+## 24v AC/DC Outputs (@ 2a)
+
+On CDC1, there are 2 of these: labeled S7 and S8.
+
+![pic9](../img/24vACDCconnector.jpg)
+
+They are used for the following 2 outputs:
+
+ - IUIC1
+ - IUIC2
+
+
+
+
+
+
+
 
 
 

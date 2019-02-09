@@ -221,7 +221,7 @@ var bodyBgSwitchIndex = 0;
 			</h1>
 			<div class="sub header">
 					<div><span><i class="calendar outline icon"></i>Feb 7, 2019</span></div>
-					<div><span><i class="clock outline icon"></i>5 min read</span></div>
+					<div><span><i class="clock outline icon"></i>6 min read</span></div>
 					<div><span><i class="angle double up icon"></i>Last updated on Feb 7, 2019</span></div>
 			</div>
 			<hr><div class="toc"><nav id="TableOfContents">
@@ -251,6 +251,7 @@ var bodyBgSwitchIndex = 0;
 <li><a href="#digital-outputs">Digital Outputs</a>
 <ul>
 <li><a href="#5v-digital-outputs">5v Digital Outputs</a></li>
+<li><a href="#24v-ac-dc-outputs-2a">24v AC/DC Outputs (@ 2a)</a></li>
 </ul></li>
 </ul>
 </nav></div>
@@ -504,6 +505,47 @@ Potential for screw terminals.</p>
 <p>These are standard 5v GPIO output signals.   Again would like to use the same
 style connector as CDC1 due to the output wires typically needing to be landed
 out in the field.</p>
+
+<p><img src="../img/5vconnector.jpg" alt="pic8" /></p>
+
+<p>On CDC1/CDC2 there are 4 GPIO output pins.   1 is assigned permanently,
+and 2 are optional:</p>
+
+<ul>
+<li>I0.RPd2 &nbsp; &nbsp; &nbsp; turns on the refrigerant pump</li>
+<li>DR1 &nbsp; &nbsp; &nbsp; &nbsp; Demand Response #1 signal &nbsp; (optional)</li>
+<li>DR2 &nbsp; &nbsp; &nbsp; &nbsp; Demand Response #2 signal &nbsp; (optional)</li>
+</ul>
+
+<p><strong>CDC3 requirement is for 5 GPIO output pins</strong>.</p>
+
+<p>The 5v output pins have proven versatile, and valuable for
+one-offs, and development/debugging.</p>
+
+<p>Other uses for the 5v outputs include interfacing to
+external hardware and using the signals to indicate
+status:</p>
+
+<ul>
+<li>When the unit is making Ice</li>
+<li>When the refrigerant pump is operating</li>
+<li>When the bear is in the melt window</li>
+<li>When the unit needs servicing by a technician</li>
+<li>PWM output signal to reflect quantity of Ice in tank</li>
+</ul>
+
+<h2 id="24v-ac-dc-outputs-2a">24v AC/DC Outputs (@ 2a)&nbsp;<a class="anchor" href="#24v-ac-dc-outputs-2a"><i class="small linkify icon"></i></a> </h2>
+
+<p>On CDC1, there are 2 of these: labeled S7 and S8.</p>
+
+<p><img src="../img/24vACDCconnector.jpg" alt="pic9" /></p>
+
+<p>They are used for the following 2 outputs:</p>
+
+<ul>
+<li>IUIC1</li>
+<li>IUIC2</li>
+</ul>
 
 			</article>
 		</section>
