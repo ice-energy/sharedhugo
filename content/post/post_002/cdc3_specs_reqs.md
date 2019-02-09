@@ -323,7 +323,7 @@ On CDC1, there are 6 of these: labeled S1,S2,S3,S4,S5,S6.
 
 ![pic11](../img/S1S6connector_CDC1.jpg)
 
-The are used for the following 6 outputs:
+They are used for the following 6 outputs:
 
   - WP_L1 and WP_L2: &nbsp; &nbsp;  the water pump
   - RP_L1 and RP_L2: &nbsp; &nbsp;  the refrigerant pump
@@ -346,6 +346,49 @@ Each individual line is protected by a 250VAC fuse.
 Here's a closeup of the CDC2 High Voltage Layout:
 
 ![pic13](../img/HVconnectors_CDC2.jpg)
+
+**CDC3 should adopt High Voltage mods from CDC2**
+
+Also note the Molex type connectors in the CDC2 picture.
+Those should be used for CDC3 High Voltage connectors.
+
+```
+It is here where the issue should be raised of:
+
+    Do these High Voltage parts need to be on-board??
+
+Answering this is strategic to the overall electrical strategy on CDC3.
+```
+
+Also, for reference purposes, CDC2 had 8 of the 240v AC Output ports:
+
+ 1. refrigerant pump
+ 2. solenoid valve
+ 3. Water pump
+ 4. Fan1
+ 5. Fan2
+ 6. Band Htr
+ 7. 24v XFMR
+ 8. COM BRD
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
