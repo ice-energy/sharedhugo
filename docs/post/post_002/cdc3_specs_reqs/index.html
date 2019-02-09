@@ -222,7 +222,7 @@ var bodyBgSwitchIndex = 0;
 			</h1>
 			<div class="sub header">
 					<div><span><i class="calendar outline icon"></i>Feb 7, 2019</span></div>
-					<div><span><i class="clock outline icon"></i>6 min read</span></div>
+					<div><span><i class="clock outline icon"></i>4 min read</span></div>
 					<div><span><i class="angle double up icon"></i>Last updated on Feb 7, 2019</span></div>
 			</div>
 			<hr><div class="toc"><nav id="TableOfContents">
@@ -240,12 +240,16 @@ var bodyBgSwitchIndex = 0;
 </ul></li>
 <li><a href="#digital-inputs">Digital Inputs</a>
 <ul>
-<li><a href="#5v-digital-inputs">5v Digital Inputs</a></li>
+<li><a href="#5v-digital-inputs">5v Digital Inputs</a>
+<ul>
+<li><a href="#new-functionality-on-digital-input-pins">New Functionality on Digital Input Pins</a></li>
+</ul></li>
 <li><a href="#24v-ac-dc-digital-input">24V AC/DC Digital Input.</a></li>
 </ul></li>
-<li><a href="#how-d-you-do-that">How&rsquo;d you do that?</a></li>
-<li><a href="#how-do-you-keep-documents-private">How do you keep documents private?</a></li>
-<li><a href="#a-few-more-notes">A few more notes</a></li>
+<li><a href="#digital-outputs">Digital Outputs</a>
+<ul>
+<li><a href="#5v-digital-outputs">5v Digital Outputs</a></li>
+</ul></li>
 </ul>
 </nav></div>
 			
@@ -400,9 +404,25 @@ extra ports for 5v and GND.   Those can remain.</p>
 <li>DR2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; reflects state of DR #2 device</li>
 </ul>
 
-<p>Needs for TargetCompOn2, DR1, DR2 as digital inputs would go away
+<p>Needs for TargetCompOn2, DR1, DR2 as 5v Digital Inputs would go away
 when these signals are more properly mapped to 24V AC/DC.   Right
 now the techs have to wire these up with external relays.</p>
+
+<h3 id="new-functionality-on-digital-input-pins">New Functionality on Digital Input Pins&nbsp;<a class="anchor" href="#new-functionality-on-digital-input-pins"><i class="small linkify icon"></i></a> </h3>
+
+<p>The requirement is to handle an incoming PWM signal, and the idea for this
+largely comes from Greg Miller.</p>
+
+<p>A PWM input signal could be used in conjunction with a solar installation
+(just one example) to indicate the amount of power that can be delivered
+to the Bear.   A duty cycle of (for example) 60% would mean that the Bear could
+turn on it&rsquo;s compressor and start Making Ice.</p>
+
+<pre><code>Any of the Input pins on the Blackfin (CDC1) could be programmed as a
+PWM input signal today.   There would need to be a very minor setup change
+on the pin, and then a more significant change to read the incoming signal
+and take some action based on that.
+</code></pre>
 
 <h2 id="24v-ac-dc-digital-input">24V AC/DC Digital Input.&nbsp;<a class="anchor" href="#24v-ac-dc-digital-input"><i class="small linkify icon"></i></a> </h2>
 
@@ -429,115 +449,28 @@ currently being routed to the 5v inputs:</p>
 <li>DR2</li>
 </ul>
 
+<p>Connector for these signals can be molex type, although it is expected
+that TargetCompOn2, DR1, and DR2 will be all landed in the field.
+Potential for screw terminals.</p>
+
 <hr />
 
-<h1 id="how-d-you-do-that">How&rsquo;d you do that?&nbsp;<a class="anchor" href="#how-d-you-do-that"><i class="small linkify icon"></i></a> </h1>
+<h1 id="digital-outputs">Digital Outputs&nbsp;<a class="anchor" href="#digital-outputs"><i class="small linkify icon"></i></a> </h1>
 
-<p>While Github is known as a source code repository, it is also something else:</p>
-
-<blockquote>
-<p>If the repository you are storing ALSO happens to be a Static Website,
-  Github can serve up pages from the site.</p>
-</blockquote>
-
-<p><strong>Let that sink in!</strong></p>
-
-<pre><code>
-It's completely unprecendented to have your code repository
-ALSO serve up web-pages that happen to be stored there.
-
-The key concept is that checking in your code and pushing
-the resulting git branch to the server is EQUIVALENT to publishing
-your website.
-
-It's a new paradigm, and it's really incredible.  It makes
-Documentation Management incredibly easy!
-
-</code></pre>
-
-<p>With proper configuration of the github repository, and proper layout
-of the data you are storing there, <strong>github can serve up the pages</strong>.</p>
-
-<p>With Hugo installed locally on my linux workstation, here&rsquo;s the process I use
-for creating that website:</p>
+<p>There are 4 categories of Digital Outputs:</p>
 
 <ul>
-<li>edit content, simple .txt file</li>
-<li>Run Hugo from within a shell script.  This generates the entire static site.</li>
-<li>use git to check-in changes, and push to Server</li>
-<li>browse to site, wait a bit for changes to propagate</li>
+<li>need 5: 5v DC (10ma)</li>
+<li>need 2: AC/DC SSR (24v,2a)</li>
+<li>need 6: AC SSR (24V,4A)</li>
+<li>need 8: AC SSR (240V, 7a)</li>
 </ul>
 
-<h1 id="how-do-you-keep-documents-private">How do you keep documents private?&nbsp;<a class="anchor" href="#how-do-you-keep-documents-private"><i class="small linkify icon"></i></a> </h1>
+<h2 id="5v-digital-outputs">5v Digital Outputs&nbsp;<a class="anchor" href="#5v-digital-outputs"><i class="small linkify icon"></i></a> </h2>
 
-<p>1st of all, pay the $99 fee.   That means the repositories are private, but the
-website pages are not.    The key is knowing where the publicly
-browsable files are, and not putting private documents there.</p>
-
-<p>The solution to pub/priv relies on a logical arrangement of the source code tree.</p>
-
-<p>See the repositories at:</p>
-
-<ul>
-<li><a href="https://github.com/ice-energy/jreed">github.com/ice-energy/jreed</a></li>
-<li><a href="https://github.com/ice-energy/user1">github.com/ice-energy/user1</a></li>
-<li><a href="https://github.com/ice-energy/user9">github.com/ice-energy/user9</a></li>
-</ul>
-
-<p>Each of those repo&rsquo;s have 2 content directories, which are the <em>Source Material</em> of
-the documents.</p>
-
-<ul>
-<li><a href="https://github.com/ice-energy/jreed/tree/master/content_pub">content_pub</a> &nbsp; &nbsp; &nbsp;  publicly browsable content.</li>
-<li><a href="https://github.com/ice-energy/jreed/tree/master/content_priv">content_priv</a> &nbsp; &nbsp; &nbsp; private content, not to be displayed on github.</li>
-</ul>
-
-<p>My technique for public/private then is to generate 2 different
-sites, that are completely seperate:</p>
-
-<ul>
-<li>One meant for public viewing on github</li>
-<li>The 2nd one stored on github, <strong>But must be copied somewhere else to be displayed</strong></li>
-</ul>
-
-<p>To do this requires executing Hugo twice while using the proper Source and
-Destination flags.</p>
-
-<p><em>For the publicly visible:</em></p>
-
-<pre><code>  hugo -c &quot;./content_pub&quot; -d &quot;./docs&quot;
-</code></pre>
-
-<p><em>To remain private:</em></p>
-
-<pre><code>  hugo -c &quot;./content_priv&quot; -d &quot;./docs_priv&quot;
-</code></pre>
-
-<p>The 2 output directories, <em>docs</em> and <em>docs_priv</em>, are both:</p>
-
-<blockquote>
-<p>Standalone, Static, Hugo-Based Websites</p>
-</blockquote>
-
-<p><em>docs</em> gets displayed by github as default.  <em>docs_priv</em> will have to
-be copied somewhere else to be displayed.</p>
-
-<h1 id="a-few-more-notes">A few more notes&nbsp;<a class="anchor" href="#a-few-more-notes"><i class="small linkify icon"></i></a> </h1>
-
-<p>See the file <a href="https://github.com/ice-energy/jreed/blob/master/x.sh">x.sh</a>.
-It&rsquo;s the shell script that automates the running of Hugo.</p>
-
-<p>My platform is <em>linux</em>, there&rsquo;d be just a bit of work to do getting this
-to run on Windows.   <em>x.sh</em> might have to be turned into a .bat file.
-Haven&rsquo;t done that yet.    <em>Hugo</em> is supposed to run fine on Windows, but
-again, something I haven&rsquo;t done yet.</p>
-
-<p>Hugo should also be supported on Mac.</p>
-
-<p>I&rsquo;d be glad to help anyone get this up and running for themselves.
-Also, it&rsquo;s not too difficult to set up different themes from gohugo.io.</p>
-
-<p>JR</p>
+<p>These are standard 5v GPIO output signals.   Again would like to use the same
+style connector as CDC1 due to the output wires typically needing to be landed
+out in the field.</p>
 
 			</article>
 		</section>

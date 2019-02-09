@@ -142,9 +142,26 @@ The other 4 are used for Bear functionality:
  - DR1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; reflects state of DR #1 device
  - DR2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; reflects state of DR #2 device
 
-Needs for TargetCompOn2, DR1, DR2 as digital inputs would go away
+Needs for TargetCompOn2, DR1, DR2 as 5v Digital Inputs would go away
 when these signals are more properly mapped to 24V AC/DC.   Right
 now the techs have to wire these up with external relays.
+
+### New Functionality on Digital Input Pins
+
+The requirement is to handle an incoming PWM signal, and the idea for this
+largely comes from Greg Miller.
+
+A PWM input signal could be used in conjunction with a solar installation
+(just one example) to indicate the amount of power that can be delivered
+to the Bear.   A duty cycle of (for example) 60% would mean that the Bear could
+turn on it's compressor and start Making Ice.
+
+```
+Any of the Input pins on the Blackfin (CDC1) could be programmed as a
+PWM input signal today.   There would need to be a very minor setup change
+on the pin, and then a more significant change to read the incoming signal
+and take some action based on that.
+```
 
 ## 24V AC/DC Digital Input.
 
@@ -167,116 +184,27 @@ currently being routed to the 5v inputs:
  - DR1
  - DR2
 
+Connector for these signals can be molex type, although it is expected
+that TargetCompOn2, DR1, and DR2 will be all landed in the field.
+Potential for screw terminals.
+
 ---
 
+# Digital Outputs
+
+There are 4 categories of Digital Outputs:
+
+  - need 5: 5v DC (10ma)
+  - need 2: AC/DC SSR (24v,2a)
+  - need 6: AC SSR (24V,4A)
+  - need 8: AC SSR (240V, 7a)
 
 
+## 5v Digital Outputs
 
-
-# How'd you do that?
-
-While Github is known as a source code repository, it is also something else:
-
-> If the repository you are storing ALSO happens to be a Static Website,
-  Github can serve up pages from the site.
-
-**Let that sink in!**
-
-```
-
-It's completely unprecendented to have your code repository
-ALSO serve up web-pages that happen to be stored there.
-
-The key concept is that checking in your code and pushing
-the resulting git branch to the server is EQUIVALENT to publishing
-your website.
-
-It's a new paradigm, and it's really incredible.  It makes
-Documentation Management incredibly easy!
-
-```
-
-With proper configuration of the github repository, and proper layout
-of the data you are storing there, **github can serve up the pages**.
-
-With Hugo installed locally on my linux workstation, here's the process I use
-for creating that website:
-
-   - edit content, simple .txt file
-   - Run Hugo from within a shell script.  This generates the entire static site.
-   - use git to check-in changes, and push to Server
-   - browse to site, wait a bit for changes to propagate
-
-
-
-# How do you keep documents private?
-
-1st of all, pay the $99 fee.   That means the repositories are private, but the
-website pages are not.    The key is knowing where the publicly
-browsable files are, and not putting private documents there.
-
-The solution to pub/priv relies on a logical arrangement of the source code tree.
-
-See the repositories at:
-
- - [github.com/ice-energy/jreed](https://github.com/ice-energy/jreed)
- - [github.com/ice-energy/user1](https://github.com/ice-energy/user1)
- - [github.com/ice-energy/user9](https://github.com/ice-energy/user9)
-
-Each of those repo's have 2 content directories, which are the *Source Material* of
-the documents.
-
- - [content_pub](https://github.com/ice-energy/jreed/tree/master/content_pub) &nbsp; &nbsp; &nbsp;  publicly browsable content.
- - [content_priv](https://github.com/ice-energy/jreed/tree/master/content_priv) &nbsp; &nbsp; &nbsp; private content, not to be displayed on github.
-
-My technique for public/private then is to generate 2 different
-sites, that are completely seperate:
-
-   - One meant for public viewing on github
-   - The 2nd one stored on github, **But must be copied somewhere else to be displayed**
-
-To do this requires executing Hugo twice while using the proper Source and
-Destination flags.
-
-*For the publicly visible:*
-
-```
-  hugo -c "./content_pub" -d "./docs"
-```
-
-*To remain private:*
-
-```
-  hugo -c "./content_priv" -d "./docs_priv"
-```
-
-The 2 output directories, *docs* and *docs_priv*, are both:
-
->  Standalone, Static, Hugo-Based Websites
-
-*docs* gets displayed by github as default.  *docs_priv* will have to
-be copied somewhere else to be displayed.
-
-
-# A few more notes
-
-See the file [x.sh](https://github.com/ice-energy/jreed/blob/master/x.sh).
-It's the shell script that automates the running of Hugo.
-
-
-My platform is *linux*, there'd be just a bit of work to do getting this
-to run on Windows.   *x.sh* might have to be turned into a .bat file.
-Haven't done that yet.    *Hugo* is supposed to run fine on Windows, but
-again, something I haven't done yet.
-
-Hugo should also be supported on Mac.
-
-I'd be glad to help anyone get this up and running for themselves.
-Also, it's not too difficult to set up different themes from gohugo.io.
-
-
-JR
-
+These are standard 5v GPIO output signals.   Again would like to use the same
+style connector as CDC1 due to the output wires typically needing to be landed
+out in the field.
 
 
 
