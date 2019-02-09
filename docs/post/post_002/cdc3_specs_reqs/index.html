@@ -237,7 +237,7 @@ var bodyBgSwitchIndex = 0;
 <li><a href="#data-storage">Data Storage</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#digital-sensor-bus">Digital Sensor Bus</a>
+<li><a href="#1-wire-bus">1-Wire Bus</a>
 <ul>
 <li><a href="#1-wire-connectors">1-Wire Connectors</a></li>
 </ul></li>
@@ -360,7 +360,7 @@ On CDC3, data storage will migrate to the Host (Linux SBC).
 
 <hr />
 
-<h1 id="digital-sensor-bus">Digital Sensor Bus&nbsp;<a class="anchor" href="#digital-sensor-bus"><i class="small linkify icon"></i></a> </h1>
+<h1 id="1-wire-bus">1-Wire Bus&nbsp;<a class="anchor" href="#1-wire-bus"><i class="small linkify icon"></i></a> </h1>
 
 <p>The standard 8 port 1-Wire solution from CDC1 will be used.</p>
 
@@ -370,7 +370,7 @@ On CDC3, data storage will migrate to the Host (Linux SBC).
 <li>I0.OAt, A1.SAt, A1.RAt, A2.SAt, A2.RAt</li>
 </ul>
 
-<p>Only temperature type 1-Wire sensors are used.    There&rsquo;s place-holders in the code
+<p><strong>Only temperature type 1-Wire sensors are being used</strong>.    There are place-holders in the code
 to use other type of sensors (humidity for example), but they are not ever used.</p>
 
 <h2 id="1-wire-connectors">1-Wire Connectors&nbsp;<a class="anchor" href="#1-wire-connectors"><i class="small linkify icon"></i></a> </h2>
@@ -398,7 +398,8 @@ This means the techs will not have to crimp wires in the field.</p>
 
 <p>The standard header that is used on CDC1 for Digital Inputs
 can be used.   In addition to the actual Pin ports, there are
-extra ports for 5v and GND.   Those can remain.</p>
+extra ports for 5v and GND.   Those can remain, as they have
+proven valuable.</p>
 
 <p><img src="../img/digioconnectors.jpg" alt="pic6" /></p>
 
@@ -416,8 +417,8 @@ extra ports for 5v and GND.   Those can remain.</p>
 <ul>
 <li>I0.RPd3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; is the refrigerant pump fault</li>
 <li>TargetCompOn2  &nbsp; optional, indicates if Target Compressor #2 is on</li>
-<li>DR1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; reflects state of DR #1 device</li>
-<li>DR2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; reflects state of DR #2 device</li>
+<li>DR1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; reflects state of DR #1 device</li>
+<li>DR2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; reflects state of DR #2 device</li>
 </ul>
 
 <p>Needs for TargetCompOn2, DR1, DR2 as 5v Digital Inputs would go away
@@ -430,7 +431,7 @@ now the techs have to wire these up with external relays.</p>
 largely comes from Greg Miller.</p>
 
 <p>A <strong>PWM Input Signal</strong> could be used in conjunction with a solar installation
-(just one example) to indicate the amount of power that can be delivered
+(just one application) to indicate the amount of power that can be delivered
 to the Bear.   A duty cycle of (for example) 60% would mean that the Bear could
 turn on it&rsquo;s compressor and start Making Ice.</p>
 

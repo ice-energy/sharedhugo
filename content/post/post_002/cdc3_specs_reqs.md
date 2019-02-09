@@ -104,7 +104,7 @@ On CDC3, data storage will migrate to the Host (Linux SBC).
 
 ---
 
-# Digital Sensor Bus
+# 1-Wire Bus
 
 The standard 8 port 1-Wire solution from CDC1 will be used.
 
@@ -112,7 +112,7 @@ IceBears' currently use up to 5 of the 1-Wire ports:
 
  - I0.OAt, A1.SAt, A1.RAt, A2.SAt, A2.RAt
 
-Only temperature type 1-Wire sensors are used.    There's place-holders in the code
+**Only temperature type 1-Wire sensors are being used**.    There are place-holders in the code
 to use other type of sensors (humidity for example), but they are not ever used.
 
 ## 1-Wire Connectors
@@ -138,7 +138,8 @@ There are 2 categories of Digital Inputs:
 
 The standard header that is used on CDC1 for Digital Inputs
 can be used.   In addition to the actual Pin ports, there are
-extra ports for 5v and GND.   Those can remain.
+extra ports for 5v and GND.   Those can remain, as they have
+proven valuable.
 
 ![pic6](../img/digioconnectors.jpg)
 
@@ -153,8 +154,8 @@ The other 4 are used for Bear functionality:
 
  - I0.RPd3 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; is the refrigerant pump fault
  - TargetCompOn2  &nbsp; optional, indicates if Target Compressor #2 is on
- - DR1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; reflects state of DR #1 device
- - DR2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; reflects state of DR #2 device
+ - DR1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; reflects state of DR #1 device
+ - DR2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; reflects state of DR #2 device
 
 Needs for TargetCompOn2, DR1, DR2 as 5v Digital Inputs would go away
 when these signals are more properly mapped to 24V AC/DC.   Right
@@ -166,7 +167,7 @@ The requirement is to handle an incoming **PWM Signal**, and the idea for this
 largely comes from Greg Miller.
 
 A **PWM Input Signal** could be used in conjunction with a solar installation
-(just one example) to indicate the amount of power that can be delivered
+(just one application) to indicate the amount of power that can be delivered
 to the Bear.   A duty cycle of (for example) 60% would mean that the Bear could
 turn on it's compressor and start Making Ice.
 
