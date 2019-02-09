@@ -52,7 +52,7 @@ and it also shows the changes proposed for CDC3.
 ![pic02](../img/cdc_arch.jpg)
 
 <br><br>
-The architectures are strikingly similary:
+The architectures are strikingly similar:
 
  - Both have a seperate Network Controller on the Front-End
  - Both have a beefy 32-bit CPU on the back-end for handling all the controls and sensors.
@@ -61,6 +61,7 @@ A newly updated CDC3:
 
  - Replaces Blackfin CPU with more highly integrated and standard ARM CPU
  - Uses highly functional **and Extremely Flexible** Linux Single Board Computer for the network front-end.
+ - uses Data Storage on-chip the Linux SBC
 
 ## CDC Controller CPU
 ```
