@@ -255,7 +255,7 @@ var bodyBgSwitchIndex = 0;
 <li><a href="#5v-digital-outputs">5v Digital Outputs</a></li>
 <li><a href="#24v-ac-dc-outputs-solid-state-relay-2a">24v AC/DC Outputs Solid-State-Relay (@ 2a)</a></li>
 <li><a href="#24v-ac-outputs-sold-state-relay-4a">24v AC Outputs Sold-State-Relay (@ 4A)</a></li>
-<li><a href="#24v-ac-outputs-sold-state-relay-4a-1">24v AC Outputs Sold-State-Relay (@ 4A)</a></li>
+<li><a href="#240v-ac-outputs-sold-state-relay-7a">240v AC Outputs Sold-State-Relay (@ 7A)</a></li>
 </ul></li>
 </ul>
 </nav></div>
@@ -311,7 +311,7 @@ The architectures are strikingly similar:</p>
 
 <ul>
 <li>Both have a seperate Network Controller on the Front-End</li>
-<li>Both have a beefy 32-bit CPU on the back-end for handling all the controls and sensors.</li>
+<li>Both have a powerful 32-bit CPU on the back-end for handling all the controls and sensors.</li>
 </ul>
 
 <p>A newly updated CDC3:</p>
@@ -598,7 +598,37 @@ status:</p>
 
 <p><strong>Total of 6 24v AC Outputs on CDC3</strong>.</p>
 
-<h2 id="24v-ac-outputs-sold-state-relay-4a-1">24v AC Outputs Sold-State-Relay (@ 4A)&nbsp;<a class="anchor" href="#24v-ac-outputs-sold-state-relay-4a-1"><i class="small linkify icon"></i></a> </h2>
+<h2 id="240v-ac-outputs-sold-state-relay-7a">240v AC Outputs Sold-State-Relay (@ 7A)&nbsp;<a class="anchor" href="#240v-ac-outputs-sold-state-relay-7a"><i class="small linkify icon"></i></a> </h2>
+
+<p>On CDC1, there are 6 of these: labeled S1,S2,S3,S4,S5,S6.</p>
+
+<p><img src="../img/S1S6connector_CDC1.jpg" alt="pic11" /></p>
+
+<p>The are used for the following 6 outputs:</p>
+
+<ul>
+<li>WP_L1 and WP_L2: &nbsp; &nbsp;  the water pump</li>
+<li>RP_L1 and RP_L2: &nbsp; &nbsp;  the refrigerant pump</li>
+<li>FAN_L1 and FAN_L2: Fans</li>
+</ul>
+
+<p><strong>At minimum, CDC3 should support these 6 outputs</strong></p>
+
+<p>The High Voltage Output ports on CDC1 are susceptible to
+electrical issues (shorts, spikes, etc), leading to burned out
+components.    The board will need to be replaced when this
+happens.</p>
+
+<p>Here&rsquo;s a shot of some board damage:</p>
+
+<p><img src="../img/burnedoutS5.jpg" alt="pic12" /></p>
+
+<p>CDC2 addressed these issues by beefing up the protection circuitry.
+Each individual line is protected by a 250VAC fuse.</p>
+
+<p>Here&rsquo;s a closeup of the CDC2 High Voltage Layout:</p>
+
+<p><img src="../img/HVconnectors_CDC2.jpg" alt="pic13" /></p>
 
 			</article>
 		</section>

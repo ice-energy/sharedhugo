@@ -55,7 +55,7 @@ and it also shows the changes proposed for CDC3.
 The architectures are strikingly similar:
 
  - Both have a seperate Network Controller on the Front-End
- - Both have a beefy 32-bit CPU on the back-end for handling all the controls and sensors.
+ - Both have a powerful 32-bit CPU on the back-end for handling all the controls and sensors.
 
 A newly updated CDC3:
 
@@ -315,7 +315,37 @@ They are used for the following 4 outputs:
 
 **Total of 6 24v AC Outputs on CDC3**.
 
-## 24v AC Outputs Sold-State-Relay (@ 4A)
+
+## 240v AC Outputs Sold-State-Relay (@ 7A)
+
+
+On CDC1, there are 6 of these: labeled S1,S2,S3,S4,S5,S6.
+
+![pic11](../img/S1S6connector_CDC1.jpg)
+
+The are used for the following 6 outputs:
+
+  - WP_L1 and WP_L2: &nbsp; &nbsp;  the water pump
+  - RP_L1 and RP_L2: &nbsp; &nbsp;  the refrigerant pump
+  - FAN_L1 and FAN_L2: Fans
+
+**At minimum, CDC3 should support these 6 outputs**
+
+The High Voltage Output ports on CDC1 are susceptible to
+electrical issues (shorts, spikes, etc), leading to burned out
+components.    The board will need to be replaced when this
+happens.
+
+Here's a shot of some board damage:
+
+![pic12](../img/burnedoutS5.jpg)
+
+CDC2 addressed these issues by beefing up the protection circuitry.
+Each individual line is protected by a 250VAC fuse.
+
+Here's a closeup of the CDC2 High Voltage Layout:
+
+![pic13](../img/HVconnectors_CDC2.jpg)
 
 
 
