@@ -61,7 +61,7 @@ A newly updated CDC3:
 
  - Replaces Blackfin CPU with more highly integrated and standard ARM CPU
  - Uses highly functional **and Extremely Flexible** Linux Single Board Computer for the network front-end.
- - uses Data Storage on-chip the Linux SBC
+ - migrates Data Storage to on-board flash of Linux SBC
 
 ## CDC Controller CPU
 ```
