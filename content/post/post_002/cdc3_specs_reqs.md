@@ -424,7 +424,7 @@ to be used today:
 
 Use Molex Connectors
 
-## Analog Inputs, simplify the circuitry
+## Analog Inputs: Simplify the Circuitry
 
 The takeaway here is that the current mix of A/D input sensors
 are all of one type:
@@ -434,8 +434,37 @@ are all of one type:
 The A/D circuitry for CDC3 is no longer required to support
 current sensors or 24v excitation.
 
+---
+
+# Sensors/Controls: &nbsp; Analog Outputs
+
+Both CDC1/CDC2 have 4 Analog Outputs, and only 1 of those outputs
+is currently being used:  **RPumpV**.  It controls the RPM's on
+the Refrigerant Pump.
+
+<br>
+![pic15](../img/DACconnector.jpg)
+<br>
+
+**CDC3 only needs 1 Analog Output**
+
+Use Molex connector.
 
 
+---
+
+# Sensors/Controls: &nbsp; Stepper Motor
+
+The Stepper Motor is used to operate the EEV, and is the same
+requirement for all of CDC1/CDC2/CDC3.
+
+<br>
+![pic16](../img/stepperconnector.jpg)
+<br>
+
+**CDC3 only needs same stepper motor as CDC1**
+
+Use Molex connector.
 
 
 
