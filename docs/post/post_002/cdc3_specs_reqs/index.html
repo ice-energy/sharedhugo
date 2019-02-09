@@ -255,7 +255,10 @@ var bodyBgSwitchIndex = 0;
 <li><a href="#5v-digital-outputs">5v Digital Outputs</a></li>
 <li><a href="#24v-ac-dc-outputs-solid-state-relay-2a">24v AC/DC Outputs Solid-State-Relay (@ 2a)</a></li>
 <li><a href="#24v-ac-outputs-sold-state-relay-4a">24v AC Outputs Sold-State-Relay (@ 4A)</a></li>
-<li><a href="#240v-ac-outputs-sold-state-relay-7a">240v AC Outputs Sold-State-Relay (@ 7A)</a></li>
+<li><a href="#240v-ac-outputs-sold-state-relay-7a">240v AC Outputs Sold-State-Relay (@ 7A)</a>
+<ul>
+<li><a href="#relay-for-the-refrigerant-pump">Relay for the Refrigerant Pump</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav></div>
@@ -639,7 +642,7 @@ Those should be used for CDC3 High Voltage connectors.</p>
 
     Do these High Voltage parts need to be on-board??
 
-Answering this is strategic to the overall electrical strategy on CDC3.
+Answering this is strategic to the overall electrical strategy on CDC3. TBD (2/9/19)
 </code></pre>
 
 <p>Also, for reference purposes, CDC2 had 8 of the 240v AC Output ports:</p>
@@ -652,8 +655,28 @@ Answering this is strategic to the overall electrical strategy on CDC3.
 <li>Fan2</li>
 <li>Band Htr</li>
 <li>24v XFMR</li>
-<li>COM BRD</li>
+<li>COM Brd</li>
 </ol>
+
+<p><strong>TBD overall electrical design.  Need input from Dean,Tom,Joseph</strong></p>
+
+<h3 id="relay-for-the-refrigerant-pump">Relay for the Refrigerant Pump&nbsp;<a class="anchor" href="#relay-for-the-refrigerant-pump"><i class="small linkify icon"></i></a> </h3>
+
+<p>There was a Refrigerant Pump investigation done about a year ago due
+to frequent failures with the inverter.</p>
+
+<p>One of the conclusions (from the Pump Manufacturer) is that we should
+operate the pump a bit differently:  We should always keep the power
+feed to the pump ON, then control actual pump ON/OFF with the 5v signal.</p>
+
+<p>What this means practically is the type of relay needs to be switched
+from:</p>
+
+<p>&nbsp; &nbsp; &nbsp; <strong>Normally Open to Normally Closed</strong></p>
+
+<p>This would keep power to the pump all the time, and still give us
+the ability to remove power in order to Reset the Pump from a fault
+condition.</p>
 
 			</article>
 		</section>

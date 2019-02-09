@@ -357,7 +357,7 @@ It is here where the issue should be raised of:
 
     Do these High Voltage parts need to be on-board??
 
-Answering this is strategic to the overall electrical strategy on CDC3.
+Answering this is strategic to the overall electrical strategy on CDC3. TBD (2/9/19)
 ```
 
 Also, for reference purposes, CDC2 had 8 of the 240v AC Output ports:
@@ -369,7 +369,34 @@ Also, for reference purposes, CDC2 had 8 of the 240v AC Output ports:
  5. Fan2
  6. Band Htr
  7. 24v XFMR
- 8. COM BRD
+ 8. COM Brd
+
+**TBD overall electrical design.  Need input from Dean,Tom,Joseph**
+
+
+### Relay for the Refrigerant Pump
+
+There was a Refrigerant Pump investigation done about a year ago due
+to frequent failures with the inverter.
+
+One of the conclusions (from the Pump Manufacturer) is that we should
+operate the pump a bit differently:  We should always keep the power
+feed to the pump ON, then control actual pump ON/OFF with the 5v signal.
+
+What this means practically is the type of relay needs to be switched
+from:
+
+ &nbsp; &nbsp; &nbsp; **Normally Open to Normally Closed**
+
+This would keep power to the pump all the time, and still give us
+the ability to remove power in order to Reset the Pump from a fault
+condition.
+
+
+
+
+
+
 
 
 
