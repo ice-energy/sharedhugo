@@ -75,7 +75,7 @@ functionality built-in and on-chip.    Chip savings include:
 
 ## On-Board JTAG debugger
 
-The reference platform from above includes an additional CPU which then
+The reference platform from above includes an additional **on-board** CPU which
 serves as a dedicated JTAG debugger.
 
 Any of the STM32F103 family of processors will work for this, for example:
@@ -287,17 +287,17 @@ On CDC1, there are 4 of these: labeled S9,S10,S11,S12.
 
 They are used for the following 4 outputs:
 
- - Z1SV &nbsp; &nbsp; &nbsp; Zone #1 Solenoid Valve
- - Z2SV &nbsp; &nbsp; &nbsp; Zone #2 Solenoid Valve
+ - Z1SV &nbsp; &nbsp; &nbsp; &nbsp; Zone #1 Solenoid Valve
+ - Z2SV &nbsp; &nbsp; &nbsp; &nbsp; Zone #2 Solenoid Valve
  - Fan2Relay &nbsp; Fan Relay
- - CPCont &nbsp; &nbsp; Compressor Contactor
+ - CPCont &nbsp; &nbsp; &nbsp; Compressor Contactor
 
 2 additional 24vAC Outputs are needed for DR:
 
  - DR1 &nbsp; Demand Response #1
  - DR2 &nbsp; Demand Response #2
 
-**Total of 6 24v AC Outputs on CDC3 **
+**Total of 6 24v AC Outputs on CDC3**.
 
 ## 24v AC Outputs Sold-State-Relay (@ 4A)
 
