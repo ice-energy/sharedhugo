@@ -20,7 +20,7 @@
       <description>Quick Summary This document will provide a list of specifications and requirements for the CDC3 controller.
 
 Note on Connectors For physical connectors on-board, the 2 categories of connector types are:
- screw terminal/push-in: &amp;nbsp; Wires need stripping molex: &amp;nbsp; &amp;nbsp; Wires need stripping and crimping and a connector  The general consensus (Ian and Tom primarily) is that for wires that land in the field the connector type should be screw-terminal/push-in.</description>
+ screw terminal/push-pin: &amp;nbsp; Wires need stripping molex: &amp;nbsp; &amp;nbsp; Wires need stripping and crimping and a connector  The general consensus (Ian and Tom primarily) is that for wires that land in the field the connector type should be screw-terminal/push-pin.</description>
     </item>
     
     <item>

@@ -32,11 +32,11 @@ controller.
 
 For physical connectors on-board, the 2 categories of connector types are:
 
- - screw terminal/push-in: &nbsp; Wires need stripping
+ - screw terminal/push-pin: &nbsp; Wires need stripping
  - molex: &nbsp; &nbsp; Wires need stripping and crimping and a connector
 
 The general consensus (Ian and Tom primarily) is that for wires that land in the field
-the connector type should be screw-terminal/push-in.
+the connector type should be screw-terminal/push-pin.
 
 For wires that are primarily connected up at the factory, make the connectors molex.
 
