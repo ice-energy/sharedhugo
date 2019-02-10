@@ -221,7 +221,7 @@ var bodyBgSwitchIndex = 0;
 			</h1>
 			<div class="sub header">
 					<div><span><i class="calendar outline icon"></i>Feb 7, 2019</span></div>
-					<div><span><i class="clock outline icon"></i>10 min read</span></div>
+					<div><span><i class="clock outline icon"></i>11 min read</span></div>
 					<div><span><i class="angle double up icon"></i>Last updated on Feb 7, 2019</span></div>
 			</div>
 			<hr><div class="toc"><nav id="TableOfContents">
@@ -268,6 +268,7 @@ var bodyBgSwitchIndex = 0;
 <li><a href="#sensors-controls-nbsp-stepper-motor">Sensors/Controls: &nbsp; Stepper Motor</a></li>
 <li><a href="#sensors-controls-nbsp-power-measurement">Sensors/Controls: &nbsp; Power Measurement</a></li>
 <li><a href="#sensors-controls-nbsp-indicators">Sensors/Controls: &nbsp; Indicators</a></li>
+<li><a href="#sensors-controls-nbsp-expandability">Sensors/Controls: &nbsp; Expandability</a></li>
 </ul>
 </nav></div>
 			
@@ -807,6 +808,51 @@ the LED indicators for networking activity/connectivity would be local to the Li
 
 <p>Error Codes are becoming a big deal, and the Dual 7-segment
 LED makes displaying double-digits extremely easy.</p>
+
+<hr />
+
+<h1 id="sensors-controls-nbsp-expandability">Sensors/Controls: &nbsp; Expandability&nbsp;<a class="anchor" href="#sensors-controls-nbsp-expandability"><i class="small linkify icon"></i></a> </h1>
+
+<p><strong>A key requirement on CDC3 is that it allow for expandability</strong></p>
+
+<p>CDC1 did not have expansion capability.</p>
+
+<p>CDC2 built in an RS485 controller that allowed RS485-compatible devices
+to be used for expansion.</p>
+
+<p><strong>For CDC3, expansion will be via Mikrobus</strong></p>
+
+<p>Mikrobus is a nice tight little form-factor, is popular currently with
+expandability for 32-bit micros, and has an <strong>ENORMOUS</strong> amount of
+boards available for purchase.</p>
+
+<p><br>
+<img src="../img/mikrobusspec.png" alt="pic20" />
+<br></p>
+
+<p>One of the standard Mikrobus boards that&rsquo;s available is the RS485 board.</p>
+
+<p><br>
+<img src="../img/RS485click.png" alt="pic21" />
+<br></p>
+
+<p>So the IceBear <strong>can have</strong> RS485 expandability through Mikrobus modules.</p>
+
+<p>In using the Mikrobus form-factor (in addition to RS485) the Bear would
+have literally hundreds of other expansion options available to
+it.</p>
+
+<p>This website shows what clicks are readily available:</p>
+
+<p>&nbsp;  &nbsp; <a href="https://www.mikroe.com/click/">https://www.mikroe.com/click</a></p>
+
+<p>Pertinent info:</p>
+
+<p><br>
+<img src="../img/AvailableClicks.png" alt="pic21" />
+<br></p>
+
+<hr />
 
 			</article>
 		</section>

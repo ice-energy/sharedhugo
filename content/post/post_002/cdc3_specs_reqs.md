@@ -509,42 +509,48 @@ Indicators/Leds local to the Controller:
 Error Codes are becoming a big deal, and the Dual 7-segment
 LED makes displaying double-digits extremely easy.
 
+---
 
+# Sensors/Controls: &nbsp; Expandability
 
+**A key requirement on CDC3 is that it allow for expandability**
 
+CDC1 did not have expansion capability.
 
+CDC2 built in an RS485 controller that allowed RS485-compatible devices
+to be used for expansion.
 
+**For CDC3, expansion will be via Mikrobus**
 
+Mikrobus is a nice tight little form-factor, is popular currently with
+expandability for 32-bit micros, and has an **ENORMOUS** amount of
+boards available for purchase.
 
+<br>
+![pic20](../img/mikrobusspec.png)
+<br>
 
+One of the standard Mikrobus boards that's available is the RS485 board.
 
+<br>
+![pic21](../img/RS485click.png)
+<br>
 
+So the IceBear **can have** RS485 expandability through Mikrobus modules.
 
+In using the Mikrobus form-factor (in addition to RS485) the Bear would
+have literally hundreds of other expansion options available to
+it.
 
+This website shows what clicks are readily available:
 
+ &nbsp;  &nbsp; [https://www.mikroe.com/click](https://www.mikroe.com/click/)
 
+Pertinent info:
 
+<br>
+![pic21](../img/AvailableClicks.png)
+<br>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+---
 
