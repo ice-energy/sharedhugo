@@ -462,9 +462,73 @@ requirement for all of CDC1/CDC2/CDC3.
 ![pic16](../img/stepperconnector.jpg)
 <br>
 
-**CDC3 only needs same stepper motor as CDC1**
+**CDC3 needs the same stepper motor as CDC1**
 
 Use Molex connector.
+
+
+---
+
+# Sensors/Controls: &nbsp; Power Measurement
+
+CDC2 has as power measuring chip with the ability to accurately measure
+overall Ice-Bear power consumption.    CDC1 did not have this chip.
+
+Here's a closeup shot of this chip on the CDC2 board:
+
+<br>
+![pic17](../img/powermeasurechip.jpg)
+<br>
+
+The chip is ADE7763 from Analog Devices
+
+<br>
+![pic18](../img/ade7763.png)
+<br>
+
+**CDC3 is required to have the ade7763 chip**
+
+
+---
+
+# Sensors/Controls: &nbsp; Indicators
+
+These are Leds for the **Controller part of the board**,
+and **NOT the Linux SBC**.   It is thought that the Linux Host
+would have the networking interface(s), and because of that,
+the LED indicators for networking activity/connectivity would be local to the Linux host,
+
+Indicators/Leds local to the Controller:
+
+ &nbsp; &nbsp; **1 Power Indicator Led**
+
+ &nbsp; &nbsp; **1 Dual-Digit 7-segment LED Display**
+
+![pic19](../img/dualdigitled.png)
+
+Error Codes are becoming a big deal, and the Dual 7-segment
+LED makes display double-digits extremely easy.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

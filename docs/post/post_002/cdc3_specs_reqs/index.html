@@ -221,7 +221,7 @@ var bodyBgSwitchIndex = 0;
 			</h1>
 			<div class="sub header">
 					<div><span><i class="calendar outline icon"></i>Feb 7, 2019</span></div>
-					<div><span><i class="clock outline icon"></i>9 min read</span></div>
+					<div><span><i class="clock outline icon"></i>10 min read</span></div>
 					<div><span><i class="angle double up icon"></i>Last updated on Feb 7, 2019</span></div>
 			</div>
 			<hr><div class="toc"><nav id="TableOfContents">
@@ -266,6 +266,8 @@ var bodyBgSwitchIndex = 0;
 </ul></li>
 <li><a href="#sensors-controls-nbsp-analog-outputs">Sensors/Controls: &nbsp; Analog Outputs</a></li>
 <li><a href="#sensors-controls-nbsp-stepper-motor">Sensors/Controls: &nbsp; Stepper Motor</a></li>
+<li><a href="#sensors-controls-nbsp-power-measurement">Sensors/Controls: &nbsp; Power Measurement</a></li>
+<li><a href="#sensors-controls-nbsp-indicators">Sensors/Controls: &nbsp; Indicators</a></li>
 </ul>
 </nav></div>
 			
@@ -761,9 +763,50 @@ requirement for all of CDC1/CDC2/CDC3.</p>
 <img src="../img/stepperconnector.jpg" alt="pic16" />
 <br></p>
 
-<p><strong>CDC3 only needs same stepper motor as CDC1</strong></p>
+<p><strong>CDC3 needs the same stepper motor as CDC1</strong></p>
 
 <p>Use Molex connector.</p>
+
+<hr />
+
+<h1 id="sensors-controls-nbsp-power-measurement">Sensors/Controls: &nbsp; Power Measurement&nbsp;<a class="anchor" href="#sensors-controls-nbsp-power-measurement"><i class="small linkify icon"></i></a> </h1>
+
+<p>CDC2 has as power measuring chip with the ability to accurately measure
+overall Ice-Bear power consumption.    CDC1 did not have this chip.</p>
+
+<p>Here&rsquo;s a closeup shot of this chip on the CDC2 board:</p>
+
+<p><br>
+<img src="../img/powermeasurechip.jpg" alt="pic17" />
+<br></p>
+
+<p>The chip is ADE7763 from Analog Devices</p>
+
+<p><br>
+<img src="../img/ade7763.png" alt="pic18" />
+<br></p>
+
+<p><strong>CDC3 is required to have the ade7763 chip</strong></p>
+
+<hr />
+
+<h1 id="sensors-controls-nbsp-indicators">Sensors/Controls: &nbsp; Indicators&nbsp;<a class="anchor" href="#sensors-controls-nbsp-indicators"><i class="small linkify icon"></i></a> </h1>
+
+<p>These are Leds for the <strong>Controller part of the board</strong>,
+and <strong>NOT the Linux SBC</strong>.   It is thought that the Linux Host
+would have the networking interface(s), and because of that,
+the LED indicators for networking activity/connectivity would be local to the Linux host,</p>
+
+<p>Indicators/Leds local to the Controller:</p>
+
+<p>&nbsp; &nbsp; <strong>1 Power Indicator Led</strong></p>
+
+<p>&nbsp; &nbsp; <strong>1 Dual-Digit 7-segment LED Display</strong></p>
+
+<p><img src="../img/dualdigitled.png" alt="pic19" /></p>
+
+<p>Error Codes are becoming a big deal, and the Dual 7-segment
+LED makes display double-digits extremely easy.</p>
 
 			</article>
 		</section>
