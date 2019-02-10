@@ -533,7 +533,7 @@ boards available for purchase.
 One of the standard Mikrobus boards that's available is the RS485 board.
 
 <br>
-![pic21](../img/RS485click.png)
+![pic21](../img/RS485.jpg)
 <br>
 
 So the IceBear **can have** RS485 expandability through Mikrobus modules.
@@ -546,7 +546,6 @@ This website shows what clicks are readily available:
 
  &nbsp;  &nbsp; [https://www.mikroe.com/click](https://www.mikroe.com/click/)
 
-
 Image showing how many clicks are available:
 
 <br>
@@ -554,4 +553,18 @@ Image showing how many clicks are available:
 <br>
 
 ---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
