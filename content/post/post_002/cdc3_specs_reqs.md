@@ -638,6 +638,46 @@ having 2 antenna's instead of one.
 
 ---
 
+# Board Input Power
+
+The Spec for the CDC2 board was 90 to 240V AC.   And so as with CDC1, the board
+could be powered from standard 110, or 220.
+
+Here's a pic of the on-board power module of CDC1:
+
+<br>
+![pic27](../img/inputpower.jpg)
+<br>
+
+**Right now this spec is undecided.  Dean an I have had
+a conversation about powering the board with either 12 or 24V**
+
+---
+
+# Box Dimensions
+
+CDC3 should follow the strategy of CDC2 and have the
+CDC board and companion electronics in a sheet metal box
+that is:
+
+ &nbsp; &nbsp; &nbsp; Sized to fit all of IB20, IB30, IB40
+
+Here is the CDC2 box:
+
+<br>
+![pic28](../img/boxsize.jpg)
+<br>
+
+---
+
+
+
+
+
+
+
+
+
 
 
 
