@@ -495,7 +495,7 @@ The chip is ADE7763 from Analog Devices
 ![pic18](../img/ade7763.png)
 <br>
 
-**CDC3 is required to have the ade7763 chip**
+**CDC3 is required to have the ADE7763 chip**
 
 
 ---
@@ -591,6 +591,51 @@ to show what an off-board rack of relays would potentially look like.
 
 ---
 
+# Connectivity: &nbsp; Standard ethernet RJ45
+
+While Bears may be leaning heavily on Wifi for client connectivity on CDC3,
+it still makes sense to have the standard Lan RJ45.
+
+<br>
+![pic24](../img/rj45.jpg)
+<br>
+
+Physical connectivity will be to the Linux Host
+
+---
+
+# Connectivity: &nbsp; Wifi
+
+CDC3 has a requirement for integrated wifi, where the unit
+can act as both a Client and an Access Point.
+
+ - Client mode allows the Bear to hop on Customer Wifi to access the internet
+ - Access Point makes the Bear a hot-spot, so devices may connect to it
+
+Physical connectivity of the wifi module will be to the Linux Host
+
+The wifi unit should have the ability to hook up an external antenna,
+as a built-in one (etched on the circuit board of the module) just
+won't work.    Our Hardware is going to be buried inside of 2 different
+sheet-metal boxes, an external antenna is going to be necessary.
+
+
+<br>
+![pic25](../img/wifimodule.png)
+<br>
+
+The antenna should have a low-profile, here's one that Tom found:
+
+<br>
+![pic26](../img/domeantenna.jpg)
+<br>
+
+## Wifi: &nbsp; 2 modules to solve Client Mode/Access Point
+
+Consider that the solution to having both Client Mode and Hot-Spot
+is to have 2 seperate on-board Wifi Modules.
+
+---
 
 
 

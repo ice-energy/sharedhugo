@@ -270,6 +270,11 @@ var bodyBgSwitchIndex = 0;
 <li><a href="#sensors-controls-nbsp-indicators">Sensors/Controls: &nbsp; Indicators</a></li>
 <li><a href="#sensors-controls-nbsp-expandability">Sensors/Controls: &nbsp; Expandability</a></li>
 <li><a href="#sensors-controls-nbsp-all-relays-off-board">Sensors/Controls: &nbsp; All Relays Off-Board</a></li>
+<li><a href="#connectivity-nbsp-standard-ethernet-rj45">Connectivity: &nbsp; Standard ethernet RJ45</a></li>
+<li><a href="#connectivity-nbsp-wifi">Connectivity: &nbsp; Wifi</a>
+<ul>
+<li><a href="#wifi-nbsp-2-modules-to-solve-client-mode-access-point">Wifi: &nbsp; 2 modules to solve Client Mode/Access Point</a></li>
+</ul></li>
 </ul>
 </nav></div>
 			
@@ -797,7 +802,7 @@ overall Ice-Bear power consumption.    CDC1 did not have this chip.</p>
 <img src="../img/ade7763.png" alt="pic18" />
 <br></p>
 
-<p><strong>CDC3 is required to have the ade7763 chip</strong></p>
+<p><strong>CDC3 is required to have the ADE7763 chip</strong></p>
 
 <hr />
 
@@ -891,6 +896,53 @@ to show what an off-board rack of relays would potentially look like.</p>
 <p><br>
 <img src="../img/relayrack.png" alt="pic23" />
 <br></p>
+
+<hr />
+
+<h1 id="connectivity-nbsp-standard-ethernet-rj45">Connectivity: &nbsp; Standard ethernet RJ45&nbsp;<a class="anchor" href="#connectivity-nbsp-standard-ethernet-rj45"><i class="small linkify icon"></i></a> </h1>
+
+<p>While Bears may be leaning heavily on Wifi for client connectivity on CDC3,
+it still makes sense to have the standard Lan RJ45.</p>
+
+<p><br>
+<img src="../img/rj45.jpg" alt="pic24" />
+<br></p>
+
+<p>Physical connectivity will be to the Linux Host</p>
+
+<hr />
+
+<h1 id="connectivity-nbsp-wifi">Connectivity: &nbsp; Wifi&nbsp;<a class="anchor" href="#connectivity-nbsp-wifi"><i class="small linkify icon"></i></a> </h1>
+
+<p>CDC3 has a requirement for integrated wifi, where the unit
+can act as both a Client and an Access Point.</p>
+
+<ul>
+<li>Client mode allows the Bear to hop on Customer Wifi to access the internet</li>
+<li>Access Point makes the Bear a hot-spot, so devices may connect to it</li>
+</ul>
+
+<p>Physical connectivity of the wifi module will be to the Linux Host</p>
+
+<p>The wifi unit should have the ability to hook up an external antenna,
+as a built-in one (etched on the circuit board of the module) just
+won&rsquo;t work.    Our Hardware is going to be buried inside of 2 different
+sheet-metal boxes, an external antenna is going to be necessary.</p>
+
+<p><br>
+<img src="../img/wifimodule.png" alt="pic25" />
+<br></p>
+
+<p>The antenna should have a low-profile, here&rsquo;s one that Tom found:</p>
+
+<p><br>
+<img src="../img/domeantenna.jpg" alt="pic26" />
+<br></p>
+
+<h2 id="wifi-nbsp-2-modules-to-solve-client-mode-access-point">Wifi: &nbsp; 2 modules to solve Client Mode/Access Point&nbsp;<a class="anchor" href="#wifi-nbsp-2-modules-to-solve-client-mode-access-point"><i class="small linkify icon"></i></a> </h2>
+
+<p>Consider that the solution to having both Client Mode and Hot-Spot
+is to have 2 seperate on-board Wifi Modules.</p>
 
 <hr />
 
