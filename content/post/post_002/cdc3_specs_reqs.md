@@ -574,10 +574,10 @@ Or in our case because we have so many of them:  **Multiple Banks of Relays**.
 
  - It enhances service-ability.
  - It greatly reduces the foot-print of the CDC controller
- - It adds up-front costs to the overall solution but saves on the back-end
- - The ability to pop in and out relay modules is **SUPER COOL**
+ - It adds up-front costs to the overall solution but saves on the back-end (less boards to replace)
+ - The ability to pop in and out relay modules is **SUPER TECH FRIENDLY** &nbsp; :boom:
  - LED status on each module indicates Live Status
- - It's **Eye Candy**.  It looks cool!  It's sexy, and Sexy sells!
+ - It's **Eye Candy**.  It looks cool!  It's sexy, and Sexy sells! &nbsp; :heart_eyes:
 
 I am going to assume that there are multiple solutions out on the market.
 
