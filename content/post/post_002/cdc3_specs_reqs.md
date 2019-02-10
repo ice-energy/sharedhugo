@@ -507,7 +507,7 @@ Indicators/Leds local to the Controller:
 ![pic19](../img/dualdigitled.png)
 
 Error Codes are becoming a big deal, and the Dual 7-segment
-LED makes display double-digits extremely easy.
+LED makes displaying double-digits extremely easy.
 
 
 
