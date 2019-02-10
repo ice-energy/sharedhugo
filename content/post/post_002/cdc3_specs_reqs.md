@@ -546,10 +546,11 @@ This website shows what clicks are readily available:
 
  &nbsp;  &nbsp; [https://www.mikroe.com/click](https://www.mikroe.com/click/)
 
-Pertinent info:
+
+Image showing how many clicks are available:
 
 <br>
-![pic21](../img/AvailableClicks.png)
+![pic22](../img/AvailableClicks.png)
 <br>
 
 ---
