@@ -633,7 +633,8 @@ The antenna should have a low-profile, here's one that Tom found:
 ## Wifi: &nbsp; 2 modules to solve Client Mode/Access Point
 
 Consider that the solution to having both Client Mode and Hot-Spot
-is to have 2 seperate on-board Wifi Modules.
+is to have 2 seperate on-board Wifi Modules.   Would also require
+having 2 antenna's instead of one.
 
 ---
 
