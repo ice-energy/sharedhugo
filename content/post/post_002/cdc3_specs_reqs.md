@@ -660,7 +660,7 @@ CDC3 should follow the strategy of CDC2 and have the
 CDC board and companion electronics in a sheet metal box
 that is:
 
- &nbsp; &nbsp; &nbsp; Sized to fit all of IB20, IB30, IB40
+ &nbsp; &nbsp; &nbsp; **Sized to fit all of IB20, IB30, IB40**
 
 Here is the CDC2 box:
 
