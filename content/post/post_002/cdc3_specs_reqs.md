@@ -321,12 +321,14 @@ They are used for the following 4 outputs:
 
 On CDC1, there are 6 of these: labeled S1,S2,S3,S4,S5,S6.
 
+<br>
 ![pic11](../img/S1S6connector_CDC1.jpg)
+<br>
 
 They are used for the following 6 outputs:
 
   - WP_L1 and WP_L2: &nbsp; &nbsp;  the water pump
-  - RP_L1 and RP_L2: &nbsp; &nbsp;  the refrigerant pump
+  - RP_L1 and RP_L2: &nbsp; &nbsp; &nbsp; &nbsp;  the refrigerant pump
   - FAN_L1 and FAN_L2: Fans
 
 **At minimum, CDC3 should support these 6 outputs**
@@ -338,16 +340,20 @@ happens.
 
 Here's a shot of some board damage:
 
+<br>
 ![pic12](../img/burnedoutS5.jpg)
+<br>
 
 CDC2 addressed these issues by beefing up the protection circuitry.
 Each individual line is protected by a 250VAC fuse.
 
 Here's a closeup of the CDC2 High Voltage Layout:
 
+<br>
 ![pic13](../img/HVconnectors_CDC2.jpg)
+<br>
 
-**CDC3 should adopt High Voltage mods from CDC2**
+**CDC3 should adopt the High Voltage mods from CDC2**
 
 Also note the Molex type connectors in the CDC2 picture.
 Those should be used for CDC3 High Voltage connectors.
@@ -402,7 +408,7 @@ a CDC boards' data-gathering abilities.
 ![pic14](../img/ADconnectors_CDC1.jpg)
 
 10 of the Inputs have been consistently used in the past and continue
-to be used today:
+to be used today (**FACT** is that 99.9% of all Bear installations have only these 10 A/D's):
 
   1. I0.CDv &nbsp; &nbsp; &nbsp; 5v reference signal 
   2. I0.SYp &nbsp; &nbsp; &nbsp; System Pressure
@@ -420,6 +426,9 @@ to be used today:
  13. N/C
  14. N/C
 
+Considering that Input #1 is really just a reference signal, and not a real sensor:  **there ends
+up only being 9 Analog Input Sensors**.
+
 **Minimum need for CDC3 is the above 10 Inputs**
 
 Use Molex Connectors
@@ -432,7 +441,7 @@ are all of one type:
  &nbsp; &nbsp; **0-10V DC, 5v excitation**
 
 The A/D circuitry for CDC3 is no longer required to support
-current sensors or 24v excitation.
+Current Sensors or 24v excitation.
 
 ---
 
@@ -554,7 +563,32 @@ Image showing how many clicks are available:
 
 ---
 
+# Sensors/Controls: &nbsp; All Relays Off-Board
 
+This is purely an exploratory item (2/9/19), meant to spur discussion at this
+point.
+
+There are a number of Solid State Relays on-board, both Input and Output, that
+have potential for being located off-board, and in a **Bank of Relays**.
+Or in our case because we have so many of them:  **Multiple Banks of Relays**.
+
+ - It enhances service-ability.
+ - It greatly reduces the foot-print of the CDC controller
+ - It probably Up-front adds cost to the overall solution (saves on the back-end)
+ - The ability to pop in and out relay modules is **SUPER COOL**
+ - LED status on each module indicates Live Status
+
+I am going to assume that there are multiple solutions out on the market.
+
+One solid example is from Opto-22.
+The picture is meant **for example only**, I'm not endorsing Opto-22, merely trying
+to show what an off-board rack of relays would potentially look like.
+
+<br>
+![pic23](../img/relayrack.png)
+<br>
+
+---
 
 
 

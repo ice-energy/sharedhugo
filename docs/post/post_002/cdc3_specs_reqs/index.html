@@ -269,6 +269,7 @@ var bodyBgSwitchIndex = 0;
 <li><a href="#sensors-controls-nbsp-power-measurement">Sensors/Controls: &nbsp; Power Measurement</a></li>
 <li><a href="#sensors-controls-nbsp-indicators">Sensors/Controls: &nbsp; Indicators</a></li>
 <li><a href="#sensors-controls-nbsp-expandability">Sensors/Controls: &nbsp; Expandability</a></li>
+<li><a href="#sensors-controls-nbsp-all-relays-off-board">Sensors/Controls: &nbsp; All Relays Off-Board</a></li>
 </ul>
 </nav></div>
 			
@@ -614,13 +615,15 @@ status:</p>
 
 <p>On CDC1, there are 6 of these: labeled S1,S2,S3,S4,S5,S6.</p>
 
-<p><img src="../img/S1S6connector_CDC1.jpg" alt="pic11" /></p>
+<p><br>
+<img src="../img/S1S6connector_CDC1.jpg" alt="pic11" />
+<br></p>
 
 <p>They are used for the following 6 outputs:</p>
 
 <ul>
 <li>WP_L1 and WP_L2: &nbsp; &nbsp;  the water pump</li>
-<li>RP_L1 and RP_L2: &nbsp; &nbsp;  the refrigerant pump</li>
+<li>RP_L1 and RP_L2: &nbsp; &nbsp; &nbsp; &nbsp;  the refrigerant pump</li>
 <li>FAN_L1 and FAN_L2: Fans</li>
 </ul>
 
@@ -633,16 +636,20 @@ happens.</p>
 
 <p>Here&rsquo;s a shot of some board damage:</p>
 
-<p><img src="../img/burnedoutS5.jpg" alt="pic12" /></p>
+<p><br>
+<img src="../img/burnedoutS5.jpg" alt="pic12" />
+<br></p>
 
 <p>CDC2 addressed these issues by beefing up the protection circuitry.
 Each individual line is protected by a 250VAC fuse.</p>
 
 <p>Here&rsquo;s a closeup of the CDC2 High Voltage Layout:</p>
 
-<p><img src="../img/HVconnectors_CDC2.jpg" alt="pic13" /></p>
+<p><br>
+<img src="../img/HVconnectors_CDC2.jpg" alt="pic13" />
+<br></p>
 
-<p><strong>CDC3 should adopt High Voltage mods from CDC2</strong></p>
+<p><strong>CDC3 should adopt the High Voltage mods from CDC2</strong></p>
 
 <p>Also note the Molex type connectors in the CDC2 picture.
 Those should be used for CDC3 High Voltage connectors.</p>
@@ -697,7 +704,7 @@ a CDC boards&rsquo; data-gathering abilities.</p>
 <p><img src="../img/ADconnectors_CDC1.jpg" alt="pic14" /></p>
 
 <p>10 of the Inputs have been consistently used in the past and continue
-to be used today:</p>
+to be used today (<strong>FACT</strong> is that 99.9% of all Bear installations have only these 10 A/D&rsquo;s):</p>
 
 <ol>
 <li>I0.CDv &nbsp; &nbsp; &nbsp; 5v reference signal</li>
@@ -723,6 +730,9 @@ to be used today:</p>
 <li><p>N/C</p></li>
 </ol>
 
+<p>Considering that Input #1 is really just a reference signal, and not a real sensor:  <strong>there ends
+up only being 9 Analog Input Sensors</strong>.</p>
+
 <p><strong>Minimum need for CDC3 is the above 10 Inputs</strong></p>
 
 <p>Use Molex Connectors</p>
@@ -735,7 +745,7 @@ are all of one type:</p>
 <p>&nbsp; &nbsp; <strong>0-10V DC, 5v excitation</strong></p>
 
 <p>The A/D circuitry for CDC3 is no longer required to support
-current sensors or 24v excitation.</p>
+Current Sensors or 24v excitation.</p>
 
 <hr />
 
@@ -850,6 +860,35 @@ it.</p>
 
 <p><br>
 <img src="../img/AvailableClicks.png" alt="pic22" />
+<br></p>
+
+<hr />
+
+<h1 id="sensors-controls-nbsp-all-relays-off-board">Sensors/Controls: &nbsp; All Relays Off-Board&nbsp;<a class="anchor" href="#sensors-controls-nbsp-all-relays-off-board"><i class="small linkify icon"></i></a> </h1>
+
+<p>This is purely an exploratory item (2/9/19), meant to spur discussion at this
+point.</p>
+
+<p>There are a number of Solid State Relays on-board, both Input and Output, that
+have potential for being located off-board, and in a <strong>Bank of Relays</strong>.
+Or in our case because we have so many of them:  <strong>Multiple Banks of Relays</strong>.</p>
+
+<ul>
+<li>It enhances service-ability.</li>
+<li>It greatly reduces the foot-print of the CDC controller</li>
+<li>It probably Up-front adds cost to the overall solution (saves on the back-end)</li>
+<li>The ability to pop in and out relay modules is <strong>SUPER COOL</strong></li>
+<li>LED status on each module indicates Live Status</li>
+</ul>
+
+<p>I am going to assume that there are multiple solutions out on the market.</p>
+
+<p>One solid example is from Opto-22.
+The picture is meant <strong>for example only</strong>, I&rsquo;m not endorsing Opto-22, merely trying
+to show what an off-board rack of relays would potentially look like.</p>
+
+<p><br>
+<img src="../img/relayrack.png" alt="pic23" />
 <br></p>
 
 <hr />
